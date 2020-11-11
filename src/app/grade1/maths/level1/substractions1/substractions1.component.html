@@ -1,0 +1,110 @@
+<body class="back-image" id="Page2">
+
+
+  <div id="time-back" style="z-index: 2;margin-top:60px; position: absolute; margin-left: 1020px; background-color: rgb(208, 224, 168); border-radius: 10px; width:250px">
+    <div id="display" style="margin-left:15px; font-size: 50px; font-family: 'Permanent Marker', cursive;">
+      00:00:00
+  </div>
+
+  <div class="buttons" >
+      <button hidden id="startStop" onclick="startStop()">Start</button> 
+      <button hidden id="reset" onclick="reset()">Reset</button>
+  </div>
+
+
+</div>
+
+ <div id = "startdiv" style ="z-index: 3; background-color: rgba(236, 236, 208, 0.95); border-style: solid; border-color: rgb(146, 146, 89); border-radius: 10px; margin-left: 30px; height: 650px; width: 1300px; position: absolute;margin-top:40px">
+  <button id="startbtn" onclick = "startgame_shape()" class="button4"><b>ආරම්භ කරන්න</b></button>
+  <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+ </div>
+
+ <app-emotiondetector></app-emotiondetector>
+
+ 
+<!-- page 01 -->
+  <!-- <div class = "center" id="Page1" data-value="0">  -->
+    <a href="/grade1/maths/level1/volume" style ='margin-top:80px;margin-left:100px;color:green;height:50px;width:200px' class="previous button1">&laquo; Previous</a>
+    <h3 style="margin-top:0px; margin-left:530px; margin-bottom: 50px;color:black"><b>නිවැරදි රූපය තෝරමු</b></h3>
+  <!-- </div> -->
+
+<form name="f1" >
+<div id="box1" style=" background-color: #ffffff;height: 280px; width : 280px;position:absolute; top:220px; left:250px; border: black; border-style:solid; border-radius: 20px;">
+  <img src = "/assets/images/shape_sound2.gif" id="question-length-1" style="position: absolute; height: 90px; margin-top: -5px; margin-left: -18px;">
+  <audio id="quest_audio_length1" src="assets/audio/big-image-question.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+<h6 style ="margin-left: 70px; margin-top:20px; font-size: 25px;"><B>ලොකු රූපය තෝරමු</B></h6>
+<img  name="clipa" id="lkid1" src="/assets/images/lkid2.gif" style="margin-top: 20px;margin-left: 30px;height:120px;width:120px" onclick="testlgame2();" hspace=10 >
+<img name="clipb" id="lkid2" src="/assets/images/lkid1.gif" style="height:60px;width:60px" onclick="testlgame();">
+<input type="checkbox"  hidden name="fruit" id="mark1"/>
+<input type="checkbox"  hidden name="fruit" id="unmark1"/>
+</div>
+
+
+<div id="box5" style="background-color: #ffffff; height: 280px; width : 280px ;position:absolute; top:220px; left:575px;  border: black; border-style:solid; border-radius: 20px;" >
+  <img src = "/assets/images/shape_sound2.gif" id="question-length-2" style="position: absolute; height: 90px; margin-top: -5px; margin-left: -15px;">
+  <audio id="quest_audio_length2" src="assets/audio/short-image-question.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+<h6 style ="margin-left: 70px; margin-top:20px; font-size: 25px;"><b>මිටි රූපය තෝරමු</b></h6>
+<img  name="clipc" id="tree1" src="/assets/images/tree.png"  style="margin-top: 75px;margin-left: 50px;height:80px;width:60px" onclick="testlgame3();">
+<img  name="clipd" id="tree2" src="/assets/images/tree.png" style="margin-left: 20px;margin-top: 30px;height:130px;width:90px" onclick="testlgame4();" hspace=10>
+<input type="checkbox"  hidden name="fruit" id="mark2"/>
+<input type="checkbox"  hidden name="fruit" id="unmark2"/>
+</div>
+
+
+<div id="box9" style=" background-color: #ffffff; height: 280px; width : 280px; position:absolute; top:220px;left:900px; border: black; border-style:solid; border-radius: 20px;" >
+  <img src = "/assets/images/shape_sound2.gif" id="question-length-3" style="position: absolute; height: 90px; margin-top: -5px; margin-left: -15px;">
+  <audio id="quest_audio_length3" src="assets/audio/long-image-question.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+<h6 style ="margin-left: 70px; margin-top:20px; font-size: 25px;"><b>දිග රූපය තෝරමු</b></h6>
+<img name="clipe" id="pen1" src="/assets/images/pen.png"  style="margin-left: 40px; margin-top: 30px;height:75px;width:80px" onclick="testlgame5();" hspace=10; vspace=9>
+<img name="clipf" id="pen2" src="/assets/images/pen.png" style="margin-left: 40px; height:80px;width:180px" onclick="testlgame6();" vspace=9>
+<input type="checkbox"  hidden name="fruit" id="mark3"/>
+<input type="checkbox"  hidden name="fruit" id="unmark3"/>
+</div>
+
+
+<div id="box11" style="position:absolute; top:490px; left:330px; width:200px; height:180px" >
+<img name="clip7" style="position:absolute; width:130px;height:130px" src="/assets/images/blank.png" >
+</div>
+
+<div id="box3" style="position:absolute; top:490px; left:660px; width:200px; height:180px" >
+<img name="clip8" style="position:absolute; width:130px;height:130px" src="/assets/images/blank.png" >
+</div>
+
+<div id="box4" style="position:absolute; top:490px; left:980px;width:200px; height:180px" >
+<img name="clip9"style="position:absolute; width:130px;height:130px" src="/assets/images/blank.png" >
+</div>
+
+
+<img id ="arrow1" src ="/assets/images/arrow_right.gif" style="display: none; margin-top: 380px; margin-left: 520px; height: 100px; width: 100px; position: absolute;">
+<button id="submit" class="button2" style="display: none;margin-top: 400px;" (click)="markstot_length1()">ඉවරයි</button> 
+<div hidden id="clickarray"></div>
+
+
+            <!-- Trigger/Open The Modal -->
+            <!-- <a id="myBtn" class="button2" >Submit</a> -->
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div style="margin-left:-60px;">
+                  <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 55px; position: absolute">
+                  <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 220px; margin-top: -50px; position: absolute;">
+                  <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 390px; position: absolute">
+                  <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+                  <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+                  <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+                  <a href="grade1/maths/level1" style="margin-left:420px ;" class="button3">ආපසු</a>
+
+                </div>
+               
+              </div>
+            </div>
+
+
+
+
+
+
+

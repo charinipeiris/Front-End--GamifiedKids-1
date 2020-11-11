@@ -1,0 +1,21 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+ .image{
+    height:40em; 
+    background-size:cover; 
+    width:100%;
+    background-image:url(/assets/images/awurudu.jpg);
+    background-position:50% 50%;
+    margin-top:-50px;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

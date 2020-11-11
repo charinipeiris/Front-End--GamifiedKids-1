@@ -1,0 +1,103 @@
+<!-- <!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css"> 
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+    <script src="script.js"></script> 
+</head>
+<body>
+
+<div id='cssmenu'>
+<ul>
+   
+  <li><a href="home" style ="color:dodgerblue"[routerLink]="['/home']">Home</a></li>
+  <li style="margin-inline-start:50px;margin-top:17px;">{{username}} {{studentname}}</li> 
+  <li style="margin-inline-start:600px"><a style="color:green" type="submit" [routerLink]="['/']">Login</a></li>
+  <li style="margin-inline-start:50px"><a routerLink='signin' style="color:tomato" type="submit" [routerLink]="['/register']">Sign in</a></li> 
+  <li style="margin-inline-start:50px"><a  href="#" role="button" style ="color:dodgerblue" (click)="logout()">Logout</a></li> 
+ 
+ 
+</ul>
+</div>
+
+</body>
+<html> -->
+
+  <!doctype html>
+  <html lang=''>
+  <head>
+     <meta charset='utf-8'>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+     <script src="../../assets/js/nav.js"></script>
+  </head>
+  <body>
+  
+  <div id='cssmenu'>
+  <ul> 
+     <li><a [routerLink]="['/home']"><span><img src="assets/images/logo.png" class="logo"></span></a></li>
+
+     <!-- <li style="margin-left:700px"><a [routerLink]="['/dashboard']"><span>Hello {{username}} {{studentname}} !!</span></a></li> -->
+     
+     <li *ngIf="checkNullToken()" style="margin-left:850px">
+         <a [routerLink]="['/dashboard']">
+            <img src = "/assets/images/nav_start.png" style ="position:absolute;height: 50px; width:70px;margin-top:-20px">
+            <span style="margin-inline-start: 60px;">Play Games</span>
+         </a>
+      </li>
+
+      <li *ngIf="checkToken()" style="margin-left:425px">
+         <a [routerLink]="['/dashboard']">
+            <img src = "/assets/images/nav_start.png" style ="position:absolute;height: 50px; width:70px;margin-top:-20px">
+            <span style="margin-inline-start: 60px;">Play Games</span>
+         </a>
+      </li>
+
+      <li *ngIf="checkToken()" style="margin-inline-start:-30px ">
+         <a [routerLink]="['/achievements']"> 
+          <img src = "/assets/images/trophy2.png" style ="position:absolute;height: 35px; width:35px;margin-top:-15px">
+          <span style="margin-inline-start: 35px;">Achievements</span> 
+       </a>
+    </li>
+
+     <li *ngIf="checkToken() && marks!= -1 && grade == 1" style="margin-inline-start:-30px ">
+        <a> 
+         <img src = "/assets/images/star_score3.png" style ="position:absolute;height: 50px; width:50px;margin-top:-20px">
+         <span style="margin-inline-start: 30px; background-color: rgb(179, 166, 52);padding-left: 20px; padding-top:5px; padding-right:10px;padding-bottom:5px;border-radius: 10px;border-style:solid; border-color:rgb(110, 102, 23);">
+            {{marks}}  /  31</span> 
+      </a>
+   </li>
+
+   <li *ngIf="checkToken() && marks!= -1 && grade == 2" style="margin-inline-start:-30px ">
+      <a> 
+       <img src = "/assets/images/star_score3.png" style ="position:absolute;height: 50px; width:50px;margin-top:-20px">
+       <span style="margin-inline-start: 30px; background-color: rgb(179, 166, 52);padding-left: 20px; padding-top:5px; padding-right:10px;padding-bottom:5px;border-radius: 10px;border-style:solid; border-color:rgb(110, 102, 23);">
+          {{marks}}  /  43</span> 
+    </a>
+ </li>
+
+   <li *ngIf="checkToken() && marks== -1" style="margin-inline-start:-30px ">
+      <a> 
+       <img src = "/assets/images/star_score3.png" style ="position:absolute;height: 50px; width:50px;margin-top:-20px">
+       <span style="margin-inline-start: 30px; background-color: rgb(179, 166, 52);padding-left: 20px; padding-top:5px; padding-right:10px;padding-bottom:5px;border-radius: 10px;border-style:solid; border-color:rgb(110, 102, 23);">
+          <!-- <img src ="/assets/images/laoder.gif" style="height:50px;width:80px"> -->
+          loading...
+         </span> 
+    </a>
+ </li>
+
+   <li *ngIf="checkToken()" style="margin-inline-start:-30px;"><a  href="#" role="button" style ="color:rgb(255, 255, 255)" (click)="logout()">Logout</a></li> 
+
+
+  </ul>
+  </div>
+  
+  </body>
+    
+  <html>
+  

@@ -1,0 +1,140 @@
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+        <meta name="description" content="Login - Register Template">
+        <meta name="author" content="Lorenzo Angelino aka MrLolok">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+       
+    </head>
+    
+    <body class = "image">
+        <ul class="breadcrumb">
+            <!-- <li><a routerLink='/dashboard'>පුංචි නැණසල</a></li> -->
+            <li><a routerLink='/dashboard'>2 ශ්‍රේණිය</a></li>
+            <li><a>ගණිතය</a></li>
+            <li><a routerLink='/grade2/maths'>පියවර 1</a></li>
+            <li><a style="background-color: #46360d; color:blanchedalmond; border-radius:10px " routerLink='/grade2/maths/level1'>සෙල්ලම් කරමු</a></li>
+        </ul>
+        <!-- <a href="/grade2/maths" style ='margin-top:65px;margin-left:60px;color:green;height:50px ;' class="previous button1">&laquo; Previous</a>   
+        <br>
+        <br>
+        <br> -->
+        <br>
+        <br>
+        <!-- <h1 align ="center"><b>  2 ශ්‍රේණිය - ගණිතය - පියවර 1</b></h1> -->
+        <br>
+        <!-- <div hidden *ngFor = "let item of GamesArray">
+            <p id="list">{{item}}</p>
+        </div> -->
+        
+        <div style="width: 100%;">
+            <div style="float:left;margin-inline-start:248px ;">  
+            <!-- button 1 -->
+            <div *ngIf="btn1 == 0">
+                <button class="button3"><a routerLink='/grade2/maths/level1/counting'><span>ඉලක්කම් ඉගෙනගමු</span></a></button> 
+                <img src="assets/images/counting-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -440px; margin-top:10px">   
+            </div> 
+
+            <div *ngIf="btn1 == 1">
+                <button class="dis-button3"><a disabled="disabled">
+                    <img src="assets/images/counting-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -60px; margin-top: -20px;">
+                <span>ඉලක්කම් ඉගෙනගමු
+                    <img src = "/assets/images/completed.png" style="margin-top:-25px;margin-bottom:-15px;height: 60px;">     
+                </span></a></button>       
+            </div> 
+
+            <!-- button 2 -->
+            <div *ngIf="btn4 == 0">
+                <button class="button3"><a routerLink='/grade2/maths/level1/additions'><span>එකතු කරමු</span></a></button> 
+                <img src="assets/images/addition-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -400px; margin-top:10px">
+            </div> 
+
+            <div *ngIf="btn4 == 1">
+                <button class="dis-button3"><a disabled="disabled"><span>එකතු කරමු
+                <img src="assets/images/addition-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -240px; margin-top: -20px;">
+                <img src = "/assets/images/completed.png" style="margin-top:-25px;margin-bottom:-15px;height: 60px;">
+                </span></a></button> 
+            </div> 
+
+            <!-- button 3 -->
+            <div *ngIf="btn5 == 0">
+                <button class="button3"><a routerLink='/grade2/maths/level1/substraction'><span>අඩු කරමු</span></a></button> 
+                <img src="assets/images/subtraction-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -400px; margin-top:10px">
+            </div> 
+
+            <div *ngIf="btn5 == 1">
+                <button class="dis-button3"><a disabled="disabled"><span>අඩු කරමු
+                    <img src="assets/images/subtraction-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -190px; margin-top: -20px;">
+                <img src = "/assets/images/completed.png" style="margin-top:-25px;margin-bottom:-15px;height: 60px;">
+                </span></a></button> 
+            </div> 
+            </div>
+          
+            <div style="margin-inline-end:130px;">
+            <!-- button 4 -->
+                <div *ngIf="btn2 == 0">
+                    <button class="button3"><a routerLink='/grade2/maths/level1/length'><span>දිග, පළල, උස, බර මනිමු </span></a></button> 
+                    <img src="assets/images/measure-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -450px; margin-top:10px">
+                </div> 
+
+                <div *ngIf="btn2 == 1">
+                    <button class="dis-button3"><a disabled="disabled"> 
+                        <img src="assets/images/measure-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -40px; margin-top: -20px;">
+                        <span>දිග, පළල, උස, බර මනිමු
+                        <img src = "/assets/images/completed.png" style="margin-top:-25px;margin-bottom:-15px;height: 60px;">
+                    </span></a></button> 
+                </div> 
+
+                <!-- button 5 -->
+                <div *ngIf="btn6 == 0">
+                    <button class="button3"><a routerLink='/grade2/maths/level1/shapes'><span>හැඩතල ඉගෙනගමු</span></a></button> 
+                    <img src="assets/images/shapes-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -440px; margin-top:10px">
+                </div> 
+
+                <div *ngIf="btn6 == 1">
+                    <button class="dis-button3"><a disabled="disabled">
+                        <img src="assets/images/shapes-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -60px; margin-top: -20px;">
+                    <span>හැඩතල ඉගෙනගමු
+                    <img src = "/assets/images/completed.png" style="margin-top:-25px;margin-bottom:-15px;height: 60px;">
+                    </span></a></button> 
+                </div> 
+
+                <!-- button 6 -->       
+                <div *ngIf="btn3 == 0">
+                    <button class="button3"><a routerLink='/grade2/maths/level1/money'><span>කාසි අදුරගමු</span></a></button> 
+                    <img src="assets/images/money-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -400px; margin-top:10px"> 
+                </div> 
+
+                <div *ngIf="btn3 == 1">
+                    <button class="dis-button3"><a disabled="disabled">
+                        <img src="assets/images/money-icon.png" style="position: absolute; height: 80px; width: 80px; margin-left: -80px; margin-top: -20px;"> 
+                        <span>කාසි අදුරගමු
+                    <img src = "/assets/images/completed.png" style="margin-top:-25px;margin-bottom:-15px;height: 60px;">
+                    </span></a></button> 
+                </div> 
+            </div>
+        </div> 
+
+        <div *ngIf="nxtBtn == 6">
+            <img src ="/assets/images/arrow_submit.gif" style="margin-top: -100px; margin-left: 1180px; height: 130px; width: 130px; position: absolute;">
+            <a href="/grade2/maths" style ='margin-top: 35px; margin-left: 1160px; color: green; height: 50px;' class="previous button1"> පියවර 2ට&raquo;</a>   
+        </div> 
+
+        <!-- <div class="w3-container">
+            <img style="margin-left: 120px;width:400px;height:400px" src="/assets/images/learn.gif">
+        <button style="text-decoration: none;width:500px;height:300px;background-color:DodgerBlue;;margin-left:30px;border-radius:15px ;text-decoration: none;font-size:50px;"><a routerLink='/grade1/maths/level1/counting'>ගණන් කරන්න ඉගෙන ගමු.</a></button>
+        
+        <a class="w3-button w3-black w3-disabled" href="#">Link Button</a>
+        </div> -->
+
+    
+    
+    </body>
+</html>
+      

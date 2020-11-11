@@ -1,0 +1,139 @@
+
+<html>
+    <head></head>
+    <body class="back-image">
+
+        <!-- page 01 -->
+        <h1 style =  "margin-left:440px; margin-top: 30px; margin-bottom: 20px;color:white"><b>කාසි ඉගෙනගනිමු - 2</b></h1>
+                <div class = "center" id="Page1" data-value="0">
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                <iframe id = "myVideo_money" class="embed-responsive-item" src="https://drive.google.com/file/d/1vXBuMdd2o5xa6uV1u6wkSDbiIulzxO2l/preview" width="640" height="480" width="640" height="480"
+                                  allowfullscreen></iframe>
+                        </div>
+                        <a style="margin-left:700px;" id ="playbtn_money" class="button1" onclick="return show_moneyL1('Page2','Page1');">සෙල්ලම් කරන්න</a>
+                </div>
+
+          <!-- page 02 -->
+         <div class= "center1" style="display:none" id="Page2" data-value="1">
+                 
+          <div id="time-back" style="z-index: 2;margin-top:10px; position: absolute; margin-left: 950px; background-color: azure; border-radius: 10px; width: 250px">
+            <div id="display" style="margin-left:15px; font-size: 50px; font-family: 'Permanent Marker', cursive;">
+              00:00:00
+          </div>
+    
+          <div class="buttons" >
+              <button hidden id="startStop" onclick="startStop()">Start</button> 
+              <button hidden id="reset" onclick="reset()">Reset</button>
+          </div>
+    
+    
+      </div>
+
+         <div id = "startdiv" style ="z-index: 3; background-color:rgba(236, 236, 208, 0.95); border-style:solid; border-color:rgb(146, 146, 89); border-radius: 10px; height: 600px; width: 1200px; position: absolute">
+          <button id="startbtn" onclick = "startgame_shape()" class="button4"><b>ආරම්භ කරන්න</b></button>
+          <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+         </div>
+            <form name="f1">
+
+            <h3 style ="margin-top: 20px; margin-left: 30px;color:white"><b>අපි පැණිරස කැම සල්ලි දීලා ගන්න ගැලපෙන කාසිය තෝරමු.</b></h3>
+            <h2 id="alert" style="visibility: hidden; color: red;"> සියල්ලටම පිලිතුරු සපයන්න</h2>
+            <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -50px; margin-left: -60px;">
+            <img src = "/assets/images/shape_sound2.gif" id="question-money-L2" style="position: absolute; height: 140px; margin-top: -80px; margin-left: 20px;">
+            <audio id="quest_audio" src="assets/audio/money_quest_G1L2.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                
+
+                <fieldset style ="margin-left: 30px; margin-top: 20px;">
+                  <img src="/assets/images/cupcake-5.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding: 8px;">
+                  <img name="clip1" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px">
+                  <img name="brown" src="/assets/images/5.png" id="a5"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test1_money2()">
+                  <img name="red" src="/assets/images/1.jpg"  id="a1" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test2_money2()">
+                  <img name="green" src="/assets/images/2.jpg"  id="a2" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test3_money2()">
+                  <img name="rw1" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                  <input type="checkbox" hidden name="fruit" id="mark1"/>
+                  <input type="checkbox" hidden name="fruit" id="unmark1"/>
+                  </fieldset>
+            <br>
+      
+
+            <fieldset style ="margin-left: 30px; margin-top: 10px;">
+              <img src="/assets/images/lollipop-2.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding: 15px;">
+              <img name="clip2" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px">
+              <img name="rect" src="/assets/images/1.jpg"  id="b1" class="imagex" style="margin-right:30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test4_money2()">
+              <img name="sqr" src="/assets/images/2.jpg"  id="b2" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 85px; width: 85px; padding: 15px;" onclick="test5_money2()">
+              <img name="cir" src="/assets/images/5.png"  id="b5" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 85px; width: 85px; padding: 15px;" onclick="test6_money2()">
+              <img name="rw2" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+              <input type="checkbox"  hidden name="fruit" id="mark2"/>
+              <input type="checkbox"  hidden name="fruit" id="unmark2"/>
+              </fieldset>
+             <br>
+
+                <fieldset style ="margin-left: 30px; margin-top: 10px;">
+                <img src="/assets/images/toffee-1.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding: 13px;">
+                
+                <img name="clip3" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px">
+            
+                <img name="leaf1" src="/assets/images/5.png" id="c5"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test7_money2()">
+                <img name="leaf2" src="/assets/images/1.jpg" id="c1" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;"  onclick="test8_money2()">
+                <img name="leaf3" src="/assets/images/2.jpg" id="c2" style="border-style:solid;margin-left:30px ;border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;"  onclick="test9_money2()">
+                
+                <img name="rw3" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                <input type="checkbox"  hidden name="fruit" id="mark3"/>
+                <input type="checkbox"  hidden name="fruit" id="unmark3"/>
+               
+            </fieldset>
+            <br>
+
+            </form>
+
+            <app-emotiondetector></app-emotiondetector>
+
+        <img id ="arrow1" src ="/assets/images/arrow_right.gif" style="display: none; margin-top:-25px; margin-left: 750px; height: 100px; width: 100px; position: absolute;">
+        <button id="submit" class="button2" style="display: none;" (click)="markstot_money2()">ඉවරයි</button>  
+        <div hidden id="clickarray"></div>
+        
+            <!-- Trigger/Open The Modal -->
+            <!-- <a id="myBtn" class="button2" >Submit</a> -->
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+              <div style="margin-left:-50px">
+                <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 55px; position: absolute">
+                <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 220px; margin-top: -50px; position: absolute;">
+                <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 390px; position: absolute">
+                <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+                <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+                <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+                <a href="grade1/maths/level2" style="margin-left:440px;" class="button3">ආපසු</a>
+              </div>
+                
+              </div>
+            </div>
+
+
+
+
+            </div>
+
+
+
+
+
+            <!-- <form>
+            <input type="submit" value="නැවත" style="position:absolute;top:510px;left:60px;width:100px;height:35px;font-size:20;color:blue" ></form> -->
+            <!-- <div id="back_box" style="position:absolute; top: 0px; left: 0px; background: rgb(117,179,240); width: 100%; height: 50px;"><span style="font-weight: bold; font-size: 28pt; margin-left: 10px;">රටාවේ ඊළඟට ගැළපෙන රූපය තෝරන්න.</span></div> -->
+            <!-- <div id="back_box2" style="position:absolute; bottom: 0px; left: 0px; background: rgb(117,179,240); width: 100%; height: 35px; padding-top: 15px; text-align: right;"><span style="font-weight: bold; font-size: 12pt; margin-right: 10px;">ගණිතය - 1 ශ්‍රේණිය</span></div> -->
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

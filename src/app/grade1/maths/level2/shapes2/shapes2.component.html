@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body class="back-image" id="body_shapes2">
+      <h1 style =  "margin-left:14em; margin-top: 30px;"><b>හැඩතල ඉගෙනගනිමු</b></h1>
+      <h3 id="marksArea" style = "visibility:hidden; margin-left:12em; margin-top: 30px"></h3>
+      <img id="0" src = "/assets/images/0star.png" style ="height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="1" src = "/assets/images/1star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="2" src = "/assets/images/2star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="3" src = "/assets/images/3star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="4" src = "/assets/images/4star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="5" src = "/assets/images/5star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="6" src = "/assets/images/6star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="7" src = "/assets/images/7star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      <img id="8" src = "/assets/images/8star.png" style ="visibility:hidden; height: 420px; position:absolute; margin-left: 52em; margin-top: -160px;">
+      
+      <div id="time-back" style="height: 70px; z-index: 2;margin-top:-73px; position: absolute; margin-left: 100px; background-color: rgb(255, 255, 255); border-radius: 10px; width: 250px">
+        <div id="display" style="margin-top: -5px;margin-left:15px; font-size: 50px; font-family: 'Permanent Marker', cursive;">
+          00:00:00
+      </div>
+    
+      <div class="buttons" >
+          <button hidden id="startStop" onclick="startStop()">Start</button> 
+          <button hidden id="reset" onclick="reset()">Reset</button>
+      </div>
+    </div> 
+    <div hidden id="clickarray"></div>
+
+
+    <app-emotiondetector></app-emotiondetector>
+
+
+ <!-- page 01 -->     
+ <div name= "center1" class= "center1" id="Page1" data-value="1">
+
+            <div id = "startdiv" style ="z-index: 3; background-color: rgba(236, 236, 208, 0.95); border-style: solid; border-color: rgb(146, 146, 89); border-radius: 10px; margin-left: -50px; height:580px; width: 1300px; position: absolute;">
+                <button id="startbtn" onclick = "startgame_shape2()" class="button4"><b>ආරම්භ කරන්න</b></button>
+                <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+               </div>
+
+
+            <img src = "/assets/images/shape_game.jpg" style="position:relative; height: 554px; width: auto; margin-right:300px; z-index:1;">
+
+            <!-- game objects -circle -->
+            <img onclick = "loadAnswer('img2-1')" src = "/assets/images/shape_sun.png" class="shape-image" id="img2-1" style="position: relative; z-index: 2;margin-top: -26.5em;height:88px; margin-left:-61em">
+            <img onclick = "loadAnswer('img3-1')" src = "/assets/images/shape_tree.png" class="shape-image" id="img3-1" style="position: relative; z-index: 2;margin-top: 6em;height:68px; margin-left:440px">
+            <img onclick = "loadAnswer('img4-1')" src = "/assets/images/shape_tire.png" class="shape-image" id="img4-1" style="position: relative; z-index: 2;margin-top: 10em;height:73px; margin-left:-582px">
+            <img onclick = "loadAnswer('img5-1')" src = "/assets/images/shape_tire.png" class="shape-image" id="img5-1" style="position: relative; z-index: 2;margin-top: 11.6em;height:50px; margin-left:57px">
+        
+            <!-- game objects -triangle -->
+            <img onclick = "loadAnswer('img6-1')" src = "/assets/images/shape_triangle.png" class="shape-image" id="img6-1" style="position: relative; z-index: 2;margin-top: -14.9em;height:74px; width: 175px;margin-left:253px">
+            <img onclick = "loadAnswer('img7-1')"  src = "/assets/images/shape_triangle_1.png" class="shape-image" id="img7-1" style="position: relative; z-index: 2;margin-top: -11.5em;height:119px; margin-left:-41.8em">
+
+            <!-- game objects -square -->
+            <img onclick = "loadAnswer('img8-1')" src = "/assets/images/shape_square.png" class="shape-image" id="img8-1" style="position: relative; z-index: 2;margin-top: -4.2em;height:61px; margin-left:472px">
+            <img onclick = "loadAnswer('img9-1')" src = "/assets/images/shape_square_1.png" class="shape-image" id="img9-1" style="position: relative; z-index: 2;margin-top: 1.7em;height:38px; margin-left:-32.9em">
+           
+            <!-- game objects -rectangle -->
+            <img onclick = "loadAnswer('img10-1')" src = "/assets/images/shape_rect.png" class="shape-image" id="img10-1" style="position: relative; z-index: 2;margin-top: -0.2em;height:70px; margin-left:219px">
+            <!-- <img src = "/assets/images/shape_square_1.png" class="shape-image" id="img11" style="position: relative; z-index: 2;margin-top: 1.7em;height:38px; margin-left:-32.9em"> -->
+
+                <img id = "answer1" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 600px;margin-top: 300px;">
+                <img id = "answer2" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 500px;margin-top: 300px;">
+
+                <p id = "error" style="visibility:hidden; position: absolute; margin-left: 500px;margin-top: 200px;">game over</p>
+            <!--  if answer correct -->
+            <img src = "/assets/images/yay_bunny.gif" id="popUp_right" style="display: none;position: absolute; z-index:2;height:180px; margin-top: 11em; margin-left:450px">
+            <audio id="kids_say_yay" src="assets/audio/kids_yay.mp3" type="audio/mp3" control>Your browser does not support the audio element. </audio>
+
+            <!--  if answer wrong -->
+            <img src = "/assets/images/w.gif" id="popUp_wrong" style="display: none;position: absolute; z-index:2;height:180px; margin-top: 11em; margin-left:450px">
+            <audio id="kids_say_ohno" src="assets/audio/kids_say_ohno.mov" type="audio/mov" control>Your browser does not support the audio element. </audio>
+
+            <!-- question audio -->
+            <img src = "/assets/images/shape_sound2.gif" id="question-circle" style="position: absolute; z-index:2;height:140px; margin-top: 1em; margin-left:600px">
+            <audio id="quest_audio1" src="assets/audio/shapes_audio_circle.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+            <img src = "/assets/images/click.gif" style="position: absolute; z-index:2;height:60px; margin-top: 3.5em; margin-left:500px">
+
+            <!-- <a href="#"  class="button3" onclick="return show('Page4','Page2','Page1');">next</a> -->
+            <!-- <a class="button3" onclick="return show('Page1');">ආපසු</a> -->
+            <a id ="next1" class="button2" style ="visibility: hidden;width:100px" onclick="return show('Page2');">ඊලග</a>
+
+            <h2 style="margin-top: -13.5em; margin-left: 850px;z-index: 2">සවන් දෙන්න <span style="font-weight: bold;">"වෘත්තය"</span></h2>
+        </div>
+
+
+        <!-- page 02 -->
+        <div class= "center2" style="display:none" id="Page2">
+            <!--game background image-->
+            <img src = "/assets/images/shape_game.jpg" style="position:relative; height: 554px; width: auto; margin-right:300px; z-index:1;">
+
+            <!-- game objects -circle -->
+            <img onclick = "loadAnswer2('img2-2')" src = "/assets/images/shape_sun.png" class="shape-image" id="img2-2" style="position: relative; z-index: 2;margin-top: -26.5em;height:88px; margin-left:-61em">
+            <img onclick = "loadAnswer2('img3-2')" src = "/assets/images/shape_tree.png" class="shape-image" id="img3-2" style="position: relative; z-index: 2;margin-top: 6em;height:68px; margin-left:440px">
+            <img onclick = "loadAnswer2('img4-2')" src = "/assets/images/shape_tire.png" class="shape-image" id="img4-2" style="position: relative; z-index: 2;margin-top: 10em;height:73px; margin-left:-582px">
+            <img onclick = "loadAnswer2('img5-2')" src = "/assets/images/shape_tire.png" class="shape-image" id="img5-2" style="position: relative; z-index: 2;margin-top: 11.6em;height:50px; margin-left:57px">
+        
+            <!-- game objects -triangle -->
+            <img onclick = "loadAnswer2('img6-2')" src = "/assets/images/shape_triangle.png" class="shape-image" id="img6-2" style="position: relative; z-index: 2;margin-top: -14.9em;height:74px; width: 175px;margin-left:253px">
+            <img onclick = "loadAnswer2('img7-2')" src = "/assets/images/shape_triangle_1.png" class="shape-image" id="img7-2" style="position: relative; z-index: 2;margin-top: -11.5em;height:119px; margin-left:-41.8em">
+           
+            <!-- game objects -square -->           
+            <img onclick = "loadAnswer2('img8-2')" src = "/assets/images/shape_square.png" class="shape-image" id="img8-2" style="position: relative; z-index: 2;margin-top: -4.2em;height:61px; margin-left:472px">
+            <img onclick = "loadAnswer2('img9-2')" src = "/assets/images/shape_square_1.png" class="shape-image" id="img9-2" style="position: relative; z-index: 2;margin-top: 1.7em;height:38px; margin-left:-32.9em">
+            
+            <!-- game objects -rectangle -->
+            <img onclick = "loadAnswer2('img10-2')" src = "/assets/images/shape_rect.png" class="shape-image" id="img10-2" style="position: relative; z-index: 2;margin-top: -0.2em;height:70px; margin-left:219px">
+            <!-- <img src = "/assets/images/shape_square_1.png" class="shape-image" id="img11" style="position: relative; z-index: 2;margin-top: 1.7em;height:38px; margin-left:-32.9em"> -->
+           
+            <img id = "answer3" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 600px;margin-top: 300px;">
+            <img id = "answer4" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 500px;margin-top: 300px;">
+
+            <!--  if answer correct -->
+            <img src = "/assets/images/yay_bunny.gif" id="popUp_right1" style="display: none;position: fixed; z-index:2;height:180px;  margin-top: 11em; margin-left:450px">
+            <audio id="kids_say_yay" src="assets/audio/kids_yay.mp3" type="audio/mp3" control>Your browser does not support the audio element. </audio>
+
+            <!--  if answer wrong -->
+            <img src = "/assets/images/w.gif" id="popUp_wrong1" style="display: none;position: fixed; z-index:2;height:180px;  margin-top: 11em; margin-left:450px">
+            <audio id="kids_say_ohno" src="assets/audio/kids_say_ohno.mov" type="audio/mov" control>Your browser does not support the audio element. </audio>
+
+            <!-- question audio -->
+            <img src = "/assets/images/shape_sound2.gif" id="question-triangle" style="position: absolute; z-index:2;height:140px; margin-top: 1em; margin-left:600px">
+            <audio id="quest_audio2" src="assets/audio/shapes_audio_triangle.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+            <img src = "/assets/images/click.gif" style="position: absolute; z-index:2;height:60px; margin-top: 3.5em; margin-left:500px">
+
+            <!-- <a class="button2" onclick="return show('Page1');">ආපසු</a> -->
+            <a id ="next2" class="button2" style ="visibility: hidden;width:100px" onclick="return show('Page3');">ඊලග</a>
+            <h2 style="margin-top: -13.5em; margin-left: 850px;z-index: 2">සවන් දෙන්න <span style="font-weight: bold;">"ත්‍රිකෝණය"</span></h2>
+
+            </div>
+        
+
+
+
+        <!-- page 03 -->
+        <div class= "center1" style="display:none" id="Page3">
+                <!--game background image-->
+                <img src = "/assets/images/shape_game.jpg" style="position:relative; height: 554px; width: auto; margin-right:300px; z-index:1;">
+    
+                <!-- game objects -circle -->
+                <img onclick = "loadAnswer3('img2-3')" src = "/assets/images/shape_sun.png" class="shape-image" id="img2-3" style="position: relative; z-index: 2;margin-top: -26.5em;height:88px; margin-left:-61em">
+                <img onclick = "loadAnswer3('img3-3')" src = "/assets/images/shape_tree.png" class="shape-image" id="img3-3" style="position: relative; z-index: 2;margin-top: 6em;height:68px; margin-left:440px">
+                <img onclick = "loadAnswer3('img4-3')" src = "/assets/images/shape_tire.png" class="shape-image" id="img4-3" style="position: relative; z-index: 2;margin-top: 10em;height:73px; margin-left:-582px">
+                <img onclick = "loadAnswer3('img5-3')" src = "/assets/images/shape_tire.png" class="shape-image" id="img5-3" style="position: relative; z-index: 2;margin-top: 11.6em;height:50px; margin-left:57px">
+            
+                <!-- game objects -triangle -->
+                <img onclick = "loadAnswer3('img6-3')" src = "/assets/images/shape_triangle.png" class="shape-image" id="img6-3" style="position: relative; z-index: 2;margin-top: -14.9em;height:74px; width: 175px;margin-left:253px">
+                <img onclick = "loadAnswer3('img7-3')"src = "/assets/images/shape_triangle_1.png" class="shape-image" id="img7-3" style="position: relative; z-index: 2;margin-top: -11.5em;height:119px; margin-left:-41.8em">
+               
+                <!-- game objects -square -->           
+                <img onclick = "loadAnswer3('img8-3')" src = "/assets/images/shape_square.png" class="shape-image" id="img8-3" style="position: relative; z-index: 2;margin-top: -4.2em;height:61px; margin-left:472px">
+                <img onclick = "loadAnswer3('img9-3')" src = "/assets/images/shape_square_1.png" class="shape-image" id="img9-3" style="position: relative; z-index: 2;margin-top: 1.7em;height:38px; margin-left:-32.9em">
+                
+                <!-- game objects -rectangle -->
+                <img onclick = "loadAnswer3('img10-3')" src = "/assets/images/shape_rect.png" class="shape-image" id="img10-3" style="position: relative; z-index: 2;margin-top: -0.2em;height:70px; margin-left:219px">
+                <!-- <img src = "/assets/images/shape_square_1.png" class="shape-image" id="img11" style="position: relative; z-index: 2;margin-top: 1.7em;height:38px; margin-left:-32.9em"> -->
+               
+                <img id = "answer5" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 600px;margin-top: 300px;">
+                <img id = "answer6" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 500px;margin-top: 300px;">
+
+                <!--  if answer correct -->
+                <img src = "/assets/images/yay_bunny.gif" id="popUp_right1" style="display: none;position: fixed; z-index:2;height:180px;  margin-top: 11em; margin-left:450px">
+                <audio id="kids_say_yay" src="assets/audio/kids_yay.mp3" type="audio/mp3" control>Your browser does not support the audio element. </audio>
+    
+                <!--  if answer wrong -->
+                <img src = "/assets/images/w.gif" id="popUp_wrong1" style="display: none;position: fixed; z-index:2;height:180px;  margin-top: 11em; margin-left:450px">
+                <audio id="kids_say_ohno" src="assets/audio/kids_say_ohno.mov" type="audio/mov" control>Your browser does not support the audio element. </audio>
+    
+                <!-- question audio -->
+                <img src = "/assets/images/shape_sound2.gif" id="question-square" style="position: absolute; z-index:2;height:140px; margin-top: 1em; margin-left:600px">
+                <audio id="quest_audio3" src="assets/audio/shape_audio_square.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                <img src = "/assets/images/click.gif" style="position: absolute; z-index:2;height:60px; margin-top: 3.5em; margin-left:500px">
+    
+                <!-- <a class="button2" onclick="return show('Page1');">ආපසු</a> -->
+                <a id ="next3" class="button2" style ="visibility: hidden;width:100px" onclick="return show('Page4');">ඊලග</a>
+                <h2 style="margin-top: -13.5em; margin-left: 850px;z-index: 2">සවන් දෙන්න <span style="font-weight: bold;">"සමචතුරස්‍රය"</span></h2>
+    
+                </div>
+
+
+                 <!-- page 04 -->
+        <div class= "center1" style="display:none;" id="Page4">
+                <!--game background image-->
+                <img src = "/assets/images/shape_game.jpg" style="position:relative; height: 554px; width: auto; margin-right:300px; z-index:1;">
+    
+                <!-- game objects -circle -->
+                <img onclick = "loadAnswer4('img2-4')" src = "/assets/images/shape_sun.png" class="shape-image" id="img2-4" style="position: relative; z-index: 2;margin-top: -26.5em;height:88px; margin-left:-61em">
+                <img onclick = "loadAnswer4('img3-4')" src = "/assets/images/shape_tree.png" class="shape-image" id="img3-4" style="position: relative; z-index: 2;margin-top: 6em;height:68px; margin-left:440px">
+                <img onclick = "loadAnswer4('img4-4')" src = "/assets/images/shape_tire.png" class="shape-image" id="img4-4" style="position: relative; z-index: 2;margin-top: 10em;height:73px; margin-left:-582px">
+                <img onclick = "loadAnswer4('img5-4')" src = "/assets/images/shape_tire.png" class="shape-image" id="img5-4" style="position: relative; z-index: 2;margin-top: 11.6em;height:50px; margin-left:57px">
+            
+                <!-- game objects -triangle -->
+                <img onclick = "loadAnswer4('img6-4')" src = "/assets/images/shape_triangle.png" class="shape-image" id="img6-4" style="position: relative; z-index: 2;margin-top: -14.9em;height:74px; width: 175px;margin-left:253px">
+                <img onclick = "loadAnswer4('img7-4')"src = "/assets/images/shape_triangle_1.png" class="shape-image" id="img7-4" style="position: relative; z-index: 2;margin-top: -11.5em;height:119px; margin-left:-41.8em">
+               
+                <!-- game objects -square -->           
+                <img onclick = "loadAnswer4('img8-4')" src = "/assets/images/shape_square.png" class="shape-image" id="img8-4" style="position: relative; z-index: 2;margin-top: -4.2em;height:61px; margin-left:472px">
+                <img onclick = "loadAnswer4('img9-4')" src = "/assets/images/shape_square_1.png" class="shape-image" id="img9-4" style="position: relative; z-index: 2;margin-top: 1.7em;height:38px; margin-left:-32.9em">
+                
+                <!-- game objects -rectangle -->
+                <img onclick = "loadAnswer4('img10-4')" src = "/assets/images/shape_rect.png" class="shape-image" id="img10-4" style="position: relative; z-index: 2;margin-top: -0.2em;height:70px; margin-left:219px">
+                <img onclick = "loadAnswer4('img11-4')" src = "/assets/images/shape_rect1.png" class="shape-image" id="img11-4" style="position: relative; z-index: 2; margin-top: 5em; height: 18px; width:150px; margin-left: -100px; ">
+               
+                <img id = "answer7" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 500px;margin-top: 300px;">
+                <img id = "answer8" src="/assets/images/trans.svg" style="position: absolute; height:85px; width:85px;border:solid; border-radius: 12px; margin-left: 400px;margin-top: 300px;">
+
+                <!--  if answer correct -->
+                <img src = "/assets/images/yay_bunny.gif" id="popUp_right1" style="display: none;position: fixed; z-index:2;height:180px;  margin-top: 11em; margin-left:450px">
+                <audio id="kids_say_yay" src="assets/audio/kids_yay.mp3" type="audio/mp3" control>Your browser does not support the audio element. </audio>
+    
+                <!--  if answer wrong -->
+                <img src = "/assets/images/w.gif" id="popUp_wrong1" style="display: none;position: fixed; z-index:2;height:180px;  margin-top: 11em; margin-left:450px">
+                <audio id="kids_say_ohno" src="assets/audio/kids_say_ohno.mov" type="audio/mov" control>Your browser does not support the audio element. </audio>
+    
+                <!-- question audio -->
+                <img src = "/assets/images/shape_sound2.gif" id="question-rect" style="position: absolute; z-index:2;height:140px; margin-top: 1em; margin-left:500px">
+                <audio id="quest_audio4" src="assets/audio/shape_audio_rect.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                <img src = "/assets/images/click.gif" style="position: absolute; z-index:2;height:60px; margin-top: 3.5em; margin-left:400px">
+    
+                <!-- <a class="button2" onclick="return show('Page1');">ආපසු</a> -->
+                <button id="final_button" class="button2" style ="visibility: hidden;width:100px"  (click)="markstot()">ඉවරයි</button>
+                <h2 style="position:absolute; margin-top: -13.5em; margin-left: 800px;z-index: 2">සවන් දෙන්න <span style="font-weight: bold;">"සෘජුකෝණාස්‍රය"</span></h2>
+                
+
+
+                <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <div style="margin-left:-50px">
+                          <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 5px; position: absolute">
+                          <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 150px; margin-top: -50px; position: absolute;">
+                          <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 290px; margin-top: -50px; position: absolute">
+                          <img id ="coin4" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 430px; position: absolute">
+                          <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+                          <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+                          <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+                          <a href="grade1/maths/level2" style="margin-left:430px ;" class="button3" onclick="return show('Page1','Page2');">ආපසු</a>
+                          </div>
+                          
+          
+                        </div>
+                 </div>
+
+
+                </div>
+    </body>
+</html> 
+

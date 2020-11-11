@@ -1,0 +1,8 @@
+<p style="margin-bottom: 0px;"><small>Click on camera to detect face and Look straight at the camera</small></p>
+<p style="margin-bottom: 0px;"><small>කැමරාව ක්‍රියාත්මක කිරීමට කැමරා අයිකනය(icon) මත click කර ඔබේ මුහුණ තිරය දෙසට හරවා කැමරාව දෙස කෙළින්ම බලන්න</small></p>
+<div class="camera-snapshot" (click)="getCameraImage()" style="position: relative;">
+    <!-- <p style="margin-bottom: 0px;"><small>Click on camera to detect face</small></p>
+    <p><small>කැමරාව ක්‍රියාත්මක කිරීමට කැමරා අයිකනය(icon) මත click කරන්න</small></p> -->
+    <canvas [hidden]="!imageUrl" #canvas width="640" height="480"></canvas>
+    <video [hidden]="imageUrl" width="100%" autoplay #video></video>
+</div>

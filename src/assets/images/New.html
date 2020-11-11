@@ -1,0 +1,159 @@
+<html>
+    <head>
+    <link href="a.css" rel="stylesheet">
+    <script type="text/javascript">
+    var a =0;
+    var m1 = 1000;
+    var m2 = 1000;
+    var m3 = 1000;
+    var m4 = 1000;
+    var m5 = 1000;
+    function test(){document.f1.txt1.style.visibility='hidden';document.f1.txt3.style.visibility='hidden';document.f3.clip1.style.visibility='hidden';
+        a++;
+    document.f1.txt1.value=a;
+    if(a==6){document.f1.txt1.value=""; a="0";document.f.but1.disabled="disabled"; 
+    window.setTimeout("start();", 0);
+    document.f2.clip2.style.left=1000;
+    document.f2.clip3.style.left=1000; 
+    document.f2.clip4.style.left=1000;
+    document.f2.clip5.style.left=1000;
+    document.f2.clip6.style.left=1000;
+    document.f1.txt3.value=" "; document.f3.clip1.src="b.jpg"; }
+    
+        if(document.f1.txt1.value<=5 && document.f1.txt1.value>0){
+            document.f.but1.disabled="disabled";
+            start();
+            setTimeout("document.f.but1.disabled=false,document.f1.txt1.style.visibility='visible',document.f1.txt3.style.visibility='visible',document.f3.clip1.style.visibility='visible'",2500);
+            
+        }
+            
+    }
+    
+    
+    function start(){
+        if(document.f1.txt1.value==1){ 
+    document.f1.txt3.value='එක ';
+    
+        document.f2.clip2.style.left=m1;
+           m1-=2;}
+           if(m1>320){
+                 window.setTimeout("start();", 0);
+    document.f3.clip1.src="1.gif";
+}
+           
+                
+    
+        if(document.f1.txt1.value==2){ 
+    document.f1.txt3.value="දෙක ";
+    
+            document.f2.clip3.style.left=m2;
+               m2-=2;
+               if(m2>370)
+                     window.setTimeout("start();", 0);
+    document.f3.clip1.src="2.gif";
+        }
+    
+        if(document.f1.txt1.value==3){ 
+    document.f1.txt3.value="තුන ";
+    
+            document.f2.clip4.style.left=m3;
+               m3-=2;
+               if(m3>430)
+                     window.setTimeout("start();", 0);
+    document.f3.clip1.src="3.gif";
+        }
+    
+    if(document.f1.txt1.value==4){ 
+    document.f1.txt3.value="හතර ";
+    
+            document.f2.clip5.style.left=m4;
+               m4-=2;
+               if(m4>480)
+                     window.setTimeout("start();", 0);
+    document.f3.clip1.src="4.gif";
+        }
+    if(document.f1.txt1.value==5){ 
+    document.f1.txt3.value="පහ ";
+    
+            document.f2.clip6.style.left=m5;
+               m5-=2;
+               if(m5>530)
+                     window.setTimeout("start();", 0);
+    document.f3.clip1.src="5.gif";
+        }
+    
+    }
+    </script>
+    
+    
+    </head>
+    
+ 
+<body class = "image">
+    <h2 align="center" >.</h2>
+    
+    <div id="block" style="position: absolute; top: 150; left: 80;">
+    
+    <form name="f">
+    
+    <input type="button" name="but1" value="ආරම්භ කරන්න." onClick="test()" style=" width:260; height:50;color:blue; font-size:30; border-radius: 5px;" >
+    
+    <img src="b.jpg" style="position:absolute;  top:0; left:500;
+    width:350; height:320;">
+    <img src="0.gif" style="position:absolute;  top:60; left:200;
+    width:350; height:320;">
+    <img src="m.gif" style="position:absolute;  top:180; left:6;
+    width:350; height:320;">
+    </form>
+    <br>
+    <form name="f1">
+    <br>
+    <div id="box1" style="position:absolute;  top:115; left:525;
+      width:300; height:150;   " >
+    <input type="text" name="txt1" value="" readonly="true" style= "width:80; height:120; text-align:center; color:red; border-width:0; font-size:70;visibility:hidden">
+    
+    <input type="text" name="txt3" value="" readonly="true" style= "width:200; height:120; text-align:center; color:blue;border-width:0; font-size:70;visibility:hidden">
+    
+    </div>
+    
+    </form>
+    <form name="f2">
+    <img name="clip2" src="ball.png" style="position:absolute;  top:260; left:1000;width:160px;height:180px " >
+    <img name="clip3" src="ball.png"style="position:absolute;  top:270; left:1000;width:160px;height:180px ">
+    <img name="clip4" src="ball.png"style="position:absolute;  top:290; left:1000;width:160px;height:180px ">
+    <img name="clip5" src="ball.png"style="position:absolute;  top:310; left:1000;width:160px;height:180px ">
+    <img name="clip6" src="ball.png"style="position:absolute;  top:320; left:1000;width:160px;height:180px ">
+ 
+    </form>
+    
+    <form name="f3">
+    
+    <div id="box3" style="position:absolute;  top:10; left:870;
+      width:100; height:100;   " >
+    
+    <img name="clip1" src="b.jpg" style="visibility:hidden">
+    
+      
+    </div>
+    
+    
+    </form>
+    
+    
+    <form name="f4" action="">
+    
+    
+    <div id="box4" style="position:absolute;  top:0; left:280; width:160; height:50;   " >
+    <input type="submit" name="but2" value="නැවතත්" style=" width:160; height:50;color:red; font-size:30;border-radius: 5px;" >
+    </div> 
+    
+    </form>
+    <!-- <div id="note" style="position:absolute; top:75; left:40; 
+    width:500; height:30;font-size:14pt    " >1 සිට5 දක්වා ගණන් කිරීම හා සංඛ්‍යා ලිවීම පුහුණු‍වන්න.</div> -->
+    
+    <!-- <div id="back_box" style="position:absolute; top: 0px; left: 0px; background: rgb(117,179,240); width: 100%; height: 50px;"><span style="font-weight: bold; font-size: 28pt; margin-left: 10px;">ගණන් කරමු.</span></div>
+    <div id="back_box2" style="position:absolute; bottom: 0px; left: 0px; background: rgb(117,179,240); width: 100%; height: 35px; padding-top: 15px; text-align: right;"><span style="font-weight: bold; font-size: 12pt; margin-right: 10px;">ගණිතය - 1 ශ්‍රේණිය</span></div> -->
+    
+    <!-- </body>
+     -->
+    <!-- </html> -->

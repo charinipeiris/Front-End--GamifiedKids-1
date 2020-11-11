@@ -1,0 +1,90 @@
+<!-- <p>sinhala-grade1-level1-game1 works!</p> -->
+<html>
+    <head></head>
+    <body class="back-image">
+
+        <!-- page 01 -->
+        <h1 style =  "margin-left:14em; margin-top: 30px; margin-bottom: 20px;"><b>රූප ඇසුරින් වචන හදමු</b></h1>
+        <a href="/grade1/sinhala/level1" style ='margin-top:65px;margin-left:60px;color:green;height:50px ;' class="previous button1">&laquo; Previous</a>
+                <div class = "center" id="Page1" data-value="0">
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                <iframe id = "myVideo_sinhala" class="embed-responsive-item" src="https://drive.google.com/file/d/1FUEv0WgKYq5PwVvhwz36l_04DGXVfcj7/preview" width="640" height="480" width="640" height="480"
+                                  allowfullscreen></iframe>
+                        </div>
+                        <a style="margin-left:700px;" id ="playbtn_sinhala" class="button1" onclick="return show_sinhalaL1('Page2','Page1');">සෙල්ලම් කරන්න</a>
+                </div>
+          <!-- page 02 -->
+          <div class= "center1" style="display:none" id="Page2" data-value="1">
+
+                <form name="f1">
+    
+                <h3 style ="margin-top: 20px; margin-left: 30px;">රූපයට ගැලපෙන වචනය මත click කරන්න</h3>
+                <h2 id="alert" style="visibility: hidden; color: red;"> සියල්ලටම පිලිතුරු සපයන්න</h2>
+                <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -75px; margin-left: 800px;">
+                <img src = "/assets/images/shape_sound2.gif" id="question-sinhala" style="position: absolute; height:140px; margin-top: -95px; margin-left:900px">
+                <audio id="quest_audio" src="assets/audio/sinhala_sentences_audio.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                    <fieldset style ="margin-left: 30px; margin-top: 30px;">
+                    <img src="/assets/images/dog.gif" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px;">
+                    <img name="clip1" src="/assets/images/question_mark.png" style="height:100px; width:100px;border:solid; border-radius: 15px; margin-right:150px">
+                    <img name="brown" src="/assets/images/child_running.PNG" id="runchild"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 100px; width:100px;" onclick="test1_sinhala()">
+                    <img name="red" src="/assets/images/child_crying.PNG"  id="crychild" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 100px; width: 100px;" onclick="test2_sinhala()">
+                    <img name="rw1" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                    <input type="checkbox" hidden name="fruit" id="mark1"/>
+                    <input type="checkbox" hidden name="fruit" id="unmark1"/>
+                    </fieldset>
+    
+                <br>
+                    <fieldset style ="margin-left: 30px; margin-top: 10px;">
+                    <img src="/assets/images/book.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding:12px">
+                    <img name="clip2" src="/assets/images/question_mark.png" style="height:100px; width:100px;border:solid; border-radius: 12px; margin-right:150px">
+                    <img name="rect" src="/assets/images/mother-cooking.PNG"  id="cookmother" class="imagex" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 100px; width: 100px;" onclick="test3_sinhala()">
+                    <img name="sqr" src="/assets/images/mother-scolding.PNG"  id="blamemother" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 100px; width: 100px;" onclick="test4_sinhala()">
+                    <img name="rw2" src="/assets/images/trans.svg" style="height:100px; width:100px;">
+                    <input type="checkbox"  hidden name="fruit" id="mark2"/>
+                    <input type="checkbox"  hidden name="fruit" id="unmark2"/>
+                </fieldset>
+                <br>
+    
+                    <fieldset style ="margin-left: 30px; margin-top: 10px;">
+                    <img src="/assets/images/sin-house.jpg" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px;">
+                    <img name="clip3" src="/assets/images/question_mark.png" style="height:100px; width:100px;border:solid; border-radius: 12px; margin-right:150px">
+                    <img name="leaf1" src="/assets/images/sun.PNG" id="sun"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 100px; width: 100px;" onclick="test5_sinhala()">
+                    <img name="leaf2" src="/assets/images/moon.PNG" id="moon" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 100px; width: 100px;"  onclick="test6_sinhala()">
+                    <img name="rw3" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                    <input type="checkbox"  hidden name="fruit" id="mark3"/>
+                    <input type="checkbox"  hidden name="fruit" id="unmark3"/>
+                   
+                </fieldset>
+                <br>
+    
+                </form>
+    
+    
+            <button id="submit" class="button2" style="display: block;" (click)="markstot_sinhala1()">ඉවරයි</button> 
+    
+                <!-- Trigger/Open The Modal -->
+                <!-- <a id="myBtn" class="button2" >Submit</a> -->
+    
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+    
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <!-- <span id ="close1" class="close">&times;</span> -->
+                    <!-- <img src="/assets/images/congratulations.gif" class="congrats_img" style = "margin-left: 270px;height: 280px; width: 450px;"> -->
+                    <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 55px; position: absolute">
+                    <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 220px; margin-top: -50px; position: absolute;">
+                    <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 390px; position: absolute">
+                    <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+                    <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+                  
+                    <a href="/grade1/sinhala/level1" class="button3">ආපසු</a>
+                  </div>
+                </div>
+    
+    
+                </div>
+    
+          
+</body>
+</html>

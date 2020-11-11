@@ -1,0 +1,244 @@
+
+<body style="background-size:cover;
+background-image:url(/assets/images/choc.jpg);
+background-position:50% 50%;
+margin-top:-50px;
+left: 50px;
+height:40em;  
+width:100%;">
+
+<div id="time-back" style="display: none; z-index: 2; margin-top: 80px; position: absolute; margin-left: 280px; background-color: azure; border-radius: 10px; width: 250px;">
+    <div id="display" style="margin-left:15px; font-size: 50px; font-family: 'Permanent Marker', cursive;">
+      00:00:00
+  </div>
+
+  <div class="buttons" >
+      <button hidden id="startStop" onclick="startStop()">Start</button> 
+      <button hidden id="reset" onclick="reset()">Reset</button>
+  </div>
+</div>
+<div hidden id="clickarray"></div>
+<!--page 01 (weight) -->
+<div id="page1-length">
+    <!-- <a href="/grade1/maths/level2" style ='margin-top:70px;margin-left:-60px;color:green;height:50px ;' class="previous button1">&laquo; Previous</a>
+    <a href="/grade1/maths/level2/length" style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1"> Next &raquo;</a> -->
+   
+    <a href="/grade1/maths/level2" style ='margin-top:70px;margin-left:70px;color:green;height:50px ;' class="previous button1">&laquo; Previous</a>
+    <a style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1" onclick="showpages_length('page2-length')"> Next &raquo;</a>
+
+<form name="f1">
+    <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -20px; margin-left: 230px;">
+    <img src = "/assets/images/shape_sound2.gif" id="click-1" style="position: absolute; height: 140px; margin-top: -55px; margin-left: 300px;">
+    <audio id="click-audio-1" src="assets/audio/click-on-image.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio> 
+
+    <h1 style="font-size: 25px; margin-top: -36px; margin-left:440px;"><b>පින්තූර මත click කරන්න</b></h1>
+   
+    <!-- weighing scale -->
+    <div id="box2" style="position:absolute; top:140px; left:320px;width:300px; height:380px;" >
+        <img  name="clip1" style="height:520px;margin-top:-15px" src="/assets/images/scale.png">
+    </div>
+
+    <!-- heavy-weighted image -->
+    <div id="box3" style="position:absolute; top:100px; left:600px; width:150px; height:150px;" >
+        <img  name="clip1" style ="margin-top:202px; margin-left:136px; width:162px; height:180px"src="/assets/images/tub.png" onClick="testweight1();">
+    </div>
+
+    <!-- light-weighted image -->
+    <div id="box3" style="position:absolute; top:100px; left:600px; width:150px; height:150px;" >
+        <img  name="clip1" style ="margin-top:92px; margin-left:-280px; width:200px; height:200px"src="/assets/images/ice1.gif" onClick="testweight2();">
+    </div>
+ 
+    <div id="box4" style="position:absolute; top:520px; left:340px; width:200px; height:50px">
+        <input type="text" name="txt7" value="" readonly="true" style= "width:270px; height:50px; margin-left:350px; text-align:center; font-weight:bold;background-color:transparent;border-color:transparent;color:black; font-size:30px">
+    </div>     
+    
+    <div id="box5" style="position:absolute; top:520px; left:640px;width:200px; height:50px" >
+        <input type="text" name="txt8" value="" readonly="true" style= "width:270px; height:50px; margin-left:-350px; text-align:center; font-weight:bold;background-color:transparent;border-color:transparent; color:black; font-size:30px">
+    </div>    
+    
+</form>
+
+</div>
+
+<app-emotiondetector></app-emotiondetector>
+<!--page 02 (volume) -->
+<div id="page2-length" style="display:none;position:absolute;top:40px;left:150px;">
+    <!-- <a href="/grade1/maths/level2" style ='margin-top:70px;margin-left:-60px;color:green;height:50px ;' class="previous button1">&laquo; Previous</a>
+    <a href="/grade1/maths/level2/length" style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1"> Next &raquo;</a> -->
+   
+    <a style ='margin-top:70px;margin-left:-60px;color:green;height:50px ;' class="previous button1" onclick="showpages_length('page1-length')">&laquo; Previous</a>
+    <a style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1" onclick="showpages_length('page3-length')"> Next &raquo;</a>
+<form name="f2">
+    
+    
+    <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -20px; margin-left: 230px;">
+    <img src = "/assets/images/shape_sound2.gif" id="click-1" style="position: absolute; height: 140px; margin-top: -55px; margin-left: 300px;">
+    <audio id="click-audio-1" src="assets/audio/click-on-image.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio> 
+
+    <h1 style="font-size: 25px; margin-top: -36px; text-align: center;"><b>පින්තූර මත click කරන්න</b></h1>
+    
+    <!-- less volume image -->
+    <div id="box3" style="position:absolute; top:100px; left:600px; width:150px; height:150px;" >
+        <img  name="clip1" style ="margin-top:70px; margin-left:-300px; width:147.5px; height:320.05px"src="/assets/images/half-glass.png" onClick="testweight3();">
+    </div>
+
+    <!-- more volume image -->
+    <div id="box3" style="position:absolute; top:100px; left:600px; width:150px; height:150px;" >
+        <img  name="clip1" style ="margin-top:70px; margin-left:-25px; width:147.5px; height:320.05px"src="/assets/images/full-glass.png" onClick="testweight4();">
+    </div>
+ 
+    <div id="box4" style="position:absolute; top:520px; left:280px; width:300px; height:50px">
+        <input type="text" name="txt9" value="" readonly="true" style= "width:550px; height:50px; margin-left:-200px; text-align:center; font-weight:bold;background-color:transparent;border-color:transparent;color:black; font-size:30px">
+    </div>     
+    
+    <div id="box5" style="position:absolute; top:520px; left:600px;width:200px; height:50px" >
+        <input type="text" name="txt10" value="" readonly="true" style= "width:550px; height:50px; margin-left:-25px; text-align:center; font-weight:bold;background-color:transparent;border-color:transparent; color:black; font-size:30px">
+    </div>    
+    
+</form>
+
+</div>
+    
+<div id="page3-length" style="display:none;position:absolute;top:40px;left:150px;">
+    
+
+     <div id = "startdiv" style ="margin-top: 20px; z-index: 3; background-color: rgba(236, 236, 208, 0.95); border-style: solid; border-color: rgb(146, 146, 89); border-radius: 10px; height: 580px; width: 1200px; position: absolute;">
+      <button id="startbtn" onclick = "startgame_length1()" class="button4"><b>ආරම්භ කරන්න</b></button>
+      <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+     </div>
+
+
+    <a  style='margin-top:70px;margin-left:-60px;color:green;height:50px;' class="previous button1" onclick="showpages_length('page2-length')"> &laquo; Previous</a>
+    <a  id ="next-length" style='display:none;margin-top: -60px;margin-left:900px;color:green;height:50px;' class="previous button1" onclick="showpages_length('page4-length')"> Next &raquo;</a> 
+    <form name="f3">
+        <div class="row">
+        <div class="column">
+            <br>
+            <br>
+            <br>
+            <br>
+            <fieldset style ="margin-left:10px; margin-top:-70px;">
+                <h3><b> ලොකුම සතාව තෝරමු</b></h3>
+                <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -20px; margin-left: 380px;">
+                <img src = "/assets/images/shape_sound2.gif" id="question-big" style="position: absolute; height: 140px; margin-top: -45px; margin-left: 450px;">
+                <audio id="quest_audio_big" src="assets/audio/big-animal-question.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                <br>
+                <br>
+                 <!-- <img src="/assets/images/cupcake-5.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding: 8px;">
+                 <img name="clip1" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px"> -->
+                 <img name="brown" src="/assets/images/felephant.jpg" id="a5"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 155px; width: 150px; padding: 12px;" onclick="test1_len()">
+                 <img name="red" src="/assets/images/fsquiral.JPG"  id="a1" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 150px; width: 150px; padding: 12px;" onclick="test2_len()">
+                 <img name="green" src="/assets/images/fbird.png"  id="a2" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 150px; width: 150px; padding: 12px;" onclick="test3_len()">
+                 <img name="rw1" src="/assets/images/trans.svg" style="height:150px; width:150px;margin-top:30px;margin-left:150px">
+                 <input type="checkbox" hidden name="fruit" id="mark1"/>
+                 <input type="checkbox" hidden name="fruit" id="unmark1"/>
+                 </fieldset>
+          </div>
+          
+          <div class="column">
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <fieldset style ="margin-left:10px; margin-top:-70px;">
+                <h3><b>උසම සතා තෝරමු</b></h3>
+                <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -20px; margin-left: 380px;">
+                <img src = "/assets/images/shape_sound2.gif" id="question-big-2" style="position: absolute; height: 140px; margin-top: -45px; margin-left: 450px;">
+                <audio id="quest_audio_big_2" src="assets/audio/tall-animal-question.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                <br>
+                <br>
+                <!-- <img src="/assets/images/lollipop-2.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding: 15px;">
+                <img name="clip2" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px"> -->
+                <img name="rect" src="/assets/images/bb2.JPG"  id="b1" class="imagex" style="margin-right:30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 150px; width:150px; padding: 12px;" onclick="test4_len()">
+                <img name="sqr" src="/assets/images/bb1.png"  id="b2" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 150px; width: 150px; padding: 15px;" onclick="test5_len()">
+                <img name="cir" src="/assets/images/bb3.JPG"  id="b5" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height:150px; width:150px; padding: 15px;" onclick="test6_len()">
+                <img name="rw2" src="/assets/images/trans.svg" style="height:150px; width:150px;margin-top:20px;margin-left:150px ">
+                <input type="checkbox"  hidden name="fruit" id="mark2"/>
+                <input type="checkbox"  hidden name="fruit" id="unmark2"/>
+            </fieldset>
+          
+          </div>
+        </div>
+    </form>
+
+</div>
+
+<div id="page4-length" style="display:none;position:absolute;top:40px;left:150px;">
+    <!-- <a  style ='margin-top:70px;margin-left:900px;color:green;height:50px;' class="previous button1" onclick="showpages_length('page3-length')"> Previous &raquo;</a> -->
+    <form name="f4" style="margin-top: 120px">
+        <div class="row">
+        <div class="column">
+            <br>
+            <br>
+            <br>
+            <br>
+            <fieldset style ="margin-left:10px; margin-top:-70px;">
+                <h3><b> වතුර වැඩියෙන් අල්ලන බදුන තෝරමු</b></h3>
+                <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -20px; margin-left: 380px;">
+                <img src = "/assets/images/shape_sound2.gif" id="question-big-3" style="position: absolute; height: 140px; margin-top: -45px; margin-left: 450px;">
+                <audio id="quest_audio_big_3" src="assets/audio/more-volume-question.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                <br>
+                <br>
+                 <!-- <img src="/assets/images/cupcake-5.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding: 8px;">
+                 <img name="clip1" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px"> -->
+                 <img name="brown" src="/assets/images/bot1.JPG" id="a5x"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 155px; width: 150px; padding: 12px;" onclick="test7_len()">
+                 <img name="red" src="/assets/images/bot3.JPG"  id="a1x" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 150px; width: 150px; padding: 12px;" onclick="test8_len()">
+                 <img name="green" src="/assets/images/bot2.JPG"  id="a2x" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 150px; width: 150px; padding: 12px;" onclick="test9_len()">
+                 <img name="rw1" src="/assets/images/trans.svg" style="height:150px; width:150px;margin-top:30px;margin-left:150px">
+                 <input type="checkbox" hidden name="fruit" id="mark3"/>
+                 <input type="checkbox" hidden name="fruit" id="unmark3"/>
+                 </fieldset>
+          </div>
+          
+          <div class="column">
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <fieldset style ="margin-left:10px; margin-top:-70px;">
+                <h3><b>බර වැඩිම දෙය තෝරමු</b></h3>
+                <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -20px; margin-left: 380px;">
+                <img src = "/assets/images/shape_sound2.gif" id="question-big-4" style="position: absolute; height: 140px; margin-top: -45px; margin-left: 450px;">
+                <audio id="quest_audio_big_4" src="assets/audio/more-weight-question.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                <br>
+                <br>
+                <!-- <img src="/assets/images/lollipop-2.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 120px; width: 120px; margin-left: 100px; margin-right: 250px; padding: 15px;">
+                <img name="clip2" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px"> -->
+                <img name="rect" src="/assets/images/cake1.JPG"  id="b1x" class="imagex" style="margin-right:30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 150px; width:150px; padding: 12px;" onclick="test10_len()">
+                <img name="sqr" src="/assets/images/cake2.JPG"  id="b2x" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 150px; width: 150px; padding: 15px;" onclick="test11_len()">
+                <img name="cir" src="/assets/images/cake3.JPG"  id="b5x" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height:150px; width:150px; padding: 15px;" onclick="test12_len()">
+                <img name="rw2" src="/assets/images/trans.svg" style="height:150px; width:150px;margin-top:20px;margin-left:150px ">
+                <input type="checkbox"  hidden name="fruit" id="mark4"/>
+                <input type="checkbox"  hidden name="fruit" id="unmark4"/>
+            </fieldset>
+          
+          </div>
+        </div>
+        <button class="button2" style="display: none;z-index:2" id="final_button" (click)="markstot_l22()">ඉවරයි</button>
+    </form>
+    
+
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+    <div style="margin-left:-50px ;">
+        <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 5px; position: absolute">
+        <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 150px; margin-top: -50px; position: absolute;">
+        <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 290px; margin-top: -50px; position: absolute">
+        <img id ="coin4" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 430px; position: absolute">
+        <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+        <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+        <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+        <a href="grade1/maths/level2"  style="margin-left:430px ;"class="button3">ආපසු</a>
+    </div>
+    
+
+    </div>
+</div>
+</div>
+
+

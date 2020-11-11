@@ -1,0 +1,149 @@
+<html>
+    <body style="height:40em; 
+    background-size:cover; 
+    width:100%;
+    background-image:url(/assets/images/bg.jpg);
+    background-position:50% 50%;
+    margin-top:-50px;" id="Page2">
+<head>
+    
+<style type="text/css">
+.txt{width:70px; height:70px; color:blue; font-size:50px; text-align:center}
+#but{width:150px; height:40px; color:blue; font-size:25}
+</style>
+
+</head>             
+<br>
+<br>
+<br>
+<div hidden id="clickarray"></div>
+<div id="time-back" style="z-index: 2; margin-top: 40px; position: absolute; margin-left: 1130px; background-color: azure; border-radius: 10px; width: 250px;">
+    <div id="display" style="margin-left:15px; font-size: 50px; font-family: 'Permanent Marker', cursive;">
+      00:00:00
+  </div>
+
+  <div class="buttons" >
+      <button hidden id="startStop" onclick="startStop()">Start</button> 
+      <button hidden id="reset" onclick="reset()">Reset</button>
+  </div>
+</div>
+
+ <div id = "startdiv" style ="margin-top: -15px; z-index: 3; background-color: rgba(236, 236, 208, 0.95); border-style: solid; border-color: rgb(146, 146, 89); border-radius: 10px; height: 580px; width: 1200px; position: absolute; margin-left: 80px;">
+  <button id="startbtn" onclick = "startgame_shape()" class="button4"><b>ආරම්භ කරන්න</b></button>
+  <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+ </div>
+
+
+<h3 style="margin-left:230px; margin-top:10px;;">ඉලක්කම් දෙක අඩු කරමු</h3>
+<img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -50px; margin-left: 10px;">
+<img src = "/assets/images/shape_sound2.gif" id="question-sub" style="position: absolute; height: 140px; margin-top: -80px; margin-left: 80px;">
+<audio id="quest_audio_sub" src="assets/audio/G2L2-sub-quest.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+
+    <form name="f1" >
+    <!-- <div style="position:absolute;top:100;left:10"></div> -->
+        <div style="position:absolute;top:100px;left:40px">
+            <input type="text"  value="." readonly="true" style="width:50px;height:50px; font-size:20px;background:transparent; color:black; border-width:0px">
+        </div>
+    
+        <input type="text" name="t1" value="21"  readonly="true" style="position:absolute;top:150px;left:200px;height:70px;width:120px;text-align:center;font-size:50px; color:brown;border-radius:15px ;">
+        <input type="text" name="t2" value="10" readonly="true" style="position:absolute;top:250px;left:200px;height:70px;width:120px;text-align:center;font-size:50px; color:brown;border-radius:15px">
+        <input type="text" name="t3" value="" readonly="true" style="position:absolute;top:350px;left:200px;height:70px;width:120px;text-align:center;font-size:50px; color:blue;border-radius:15px">
+        <img src="/assets/images/subss.png" style="position:absolute;top:260px;left:120px;width:40px;height:50px">
+
+        <div style="position:absolute;top:440px;left:200px;border:solid thin;width:120px;height:0px"></div>
+        <div style="position:absolute;top:335px;left:200px;border:solid thin; ;width:120px;height:2px"></div>
+         
+        <img src="/assets/images/engine.png" style="margin-top:380px;left:00px;width:150px;height:150px">
+        <div style="position:absolute;top:500px;left:150px;height:100px;width:250px;border-style: solid;background-color: black;">
+            <input type="button" id="n1" class="txt" name="b6" value="9"  onclick="tes_sub6()" style="position:absolute;top:10px;left:10px;border-radius:15px">
+            <input type="button" id="n2" class="txt" name="b3" value="11"  onclick="tes_sub3()" style="position:absolute;top:10px;left:90px;border-radius:15px">
+            <input type="button" id="n3" class="txt" name="b4" value="10"  onclick="tes_sub4()" style="position:absolute;top:10px;left:170px;border-radius:15px">
+            <img name="rw1" src="/assets/images/trans.svg" style="height:150px; width:150px;margin-top:-190px;margin-left:160px  ; ">
+            <input type="checkbox" hidden name="fruit" id="mark1"/>
+            <input type="checkbox" hidden name="fruit" id="unmark1"/>
+        </div>
+
+         </form>
+    <!-------------addition 2 --------------->
+
+    <form name="f2" >
+     
+        <div style="position:absolute;top:100px;left:40px">
+            <input type="text"  value="." readonly="true" style="width:50px;height:50px; font-size:20px;background:transparent; color:black; border-width:0px">
+        </div>
+        
+        <input type="text" name="t4" value="47"  readonly="true" style="position:absolute;top:150px;left:610px;height:70px;width:120px;text-align:center;font-size:50px; color:brown;border-radius:15px">
+        <input type="text" name="t5" value="35" readonly="true" style="position:absolute;top:250px;left:610px;height:70px;width:120px;text-align:center;font-size:50px; color:brown;border-radius:15px">
+        <input type="text" name="t6" value="" readonly="true" style="position:absolute;top:350px;left:610px;height:70px;width:120px;text-align:center;font-size:50px; color:blue;border-radius:15px">
+        <img src="/assets/images/subss.png" style="position:absolute;top:260px;left:550px;width:40px;height:50px">
+        <div style="position:absolute;top:440px;left:610px;border:solid thin;width:120px;height:0px"></div>
+        <div style="position:absolute;top:335px;left:610px;border:solid thin; ;width:120px;height:2px"></div>   
+        
+        <div style="position:absolute;top:500px;left:520px;height:100px;width:250px;border-style: solid;background-color: black;">
+           
+            <input type="button" id="n4"class="txt" name="b32" value="11"  onclick="tes_sub32()" style="position:absolute;top:10px;left:10px;border-radius:15px ;">
+            <input type="button" id="n5"class="txt" name="b52" value="12"  onclick="tes_sub52()" style="position:absolute;top:10px;left:90px;border-radius:15px">
+            <input type="button" id="n6"class="txt" name="b62" value="15"  onclick="tes_sub62()" style="position:absolute;top:10px;left:170px;border-radius:15px">
+            <img name="rw2" src="/assets/images/trans.svg" style="height:150px; width:150px;margin-top:-190px;margin-left:200px  ; ">
+            <input type="checkbox" hidden name="fruit" id="mark2"/>
+            <input type="checkbox" hidden name="fruit" id="unmark2"/>
+        </div>
+    
+
+        </form> 
+
+        <!-- --------//addition 3------ -->
+        <form name="f3" >
+ 
+            <div style="position:absolute;top:100px;left:40px">
+            <input type="text"  value="." readonly="true" style="width:50px;height:50px; font-size:20px;background:transparent; color:black; border-width:0px">
+            </div>
+            
+            <input type="text" name="t7" value="56"  readonly="true" style="position:absolute;top:150px;left:1000px;height:70px;width:120px;text-align:center;font-size:50px; color:brown;border-radius:15px">
+            <input type="text" name="t8" value="32" readonly="true" style="position:absolute;top:250px;left:1000px;height:70px;width:120px;text-align:center;font-size:50px; color:brown;border-radius:15px">
+            <input type="text" name="t9" value="" readonly="true" style="position:absolute;top:350px;left:1000px;height:70px;width:120px;text-align:center;font-size:50px; color:blue;border-radius:15px">
+            <img src="/assets/images/subss.png" style="position:absolute;top:260px;left:940px;width:40px;height:50px">
+            <div style="position:absolute;top:440px;left:1000px;border:solid thin;width:120px;height:0px"></div>
+            <div style="position:absolute;top:335px;left:1000px;border:solid thin; ;width:120px;height:2px"></div>   
+            
+            <div style="position:absolute;top:500px;left:900px;height:100px;width:250px;border-style: solid;background-color: black;">
+                
+                <input type="button" id="n7" class="txt" name="b723" value="24"  onclick="tes_sub723()" style="position:absolute;top:10px;left:10px;border-radius:15px">
+                <input type="button" id="n8" class="txt" name="b923" value="22"  onclick="tes_sub923()" style="position:absolute;top:10px;left:90px;border-radius:15px">
+                <input type="button" id="n9" class="txt" name="b1023" value="88"  onclick="tes_sub1023()" style="position:absolute;top:10px;left:170px;font-size:50px;border-radius:15px">
+                <img name="rw3" src="/assets/images/trans.svg" style="height:150px; width:150px;margin-top:-190px;margin-left:220px  ; ">
+                <input type="checkbox" hidden name="fruit" id="mark3"/>
+                <input type="checkbox" hidden name="fruit" id="unmark3"/>
+            </div>
+            
+            </form>  
+            
+            <app-emotiondetector></app-emotiondetector>
+
+            <button id="submit" class="button2" style="display: none;" (click)="markstot_substraction3()">ඉවරයි</button> 
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div style=margin-left:-60px>
+                    <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 55px; position: absolute">
+                    <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 220px; margin-top: -50px; position: absolute;">
+                    <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 390px; position: absolute">
+                    <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+                    <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+                    <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+                    <a href="grade2/maths/level2" style="margin-left:440px ;" class="button3">ආපසු</a>
+                </div>
+               
+              </div>
+            </div>
+
+
+
+    </body>
+    
+    </html>
+
+

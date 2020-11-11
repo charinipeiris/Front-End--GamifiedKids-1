@@ -1,0 +1,192 @@
+
+  
+    <body class="back-image" id="Page2">
+
+
+        <div id="time-back" style="z-index: 2; margin-top: 40px; position: absolute; margin-left: 820px; background-color: azure; border-radius: 10px; width: 200px;">
+            <div id="display" style="margin-left:15px; font-size:42px; font-family: 'Permanent Marker', cursive;">
+              00:00:00
+          </div>
+    
+          <div class="buttons" >
+              <button hidden id="startStop" onclick="startStop()">Start</button> 
+              <button hidden id="reset" onclick="reset()">Reset</button>
+          </div>
+    
+    
+     </div>
+     <div hidden id="clickarray"></div>
+
+    <!--page 01 -->
+
+<div id="page1-count_intro">
+    <div id = "startdiv" style ="z-index: 3; background-color: rgba(236, 236, 208, 0.95); border-style: solid; border-color: rgb(146, 146, 89); border-radius: 10px; height: 600px; width: 1300px; position: absolute;margin-left:50px; margin-top: 40px">
+        <button id="startbtn" onclick = "startgame_shape()" class="button4"><b>ආරම්භ කරන්න</b></button>
+        <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+       </div>
+    <br>
+    <br>
+    <br>
+    <a href="/grade1/maths/level1/counting" style ='margin-top:10px;margin-left:70px;color:green;height:50px ;' class="previous button1">&laquo; Previous</a>
+    <a id="next" style ='display: none; margin-top:-60px;margin-left:1100px;color:green;height:50px ;' class="previous button1" onclick="showpages_count_intro('page2-count_intro')"> Next &raquo;</a>
+    <br>
+
+    <h5 style="margin-left:400px;margin-top:10px ;"><B>රූප ගණන් කර, ගැළපෙන ඉලක්කම තෝරමු</B></h5>
+    <br>
+    <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -70px; margin-left:200px;">
+    <img src = "/assets/images/shape_sound2.gif" id="question-shapes-g2" style="position: absolute; height: 140px; margin-top: -100px; margin-left:280px;">
+
+    <audio id="quest_audio_g2" src="assets/audio/G2L2_counting_quest.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio> 
+
+<form name="f1" >
+        <img src ="/assets/images/pic5.JPG" style="width:300px;height:200px;margin-left:50px;margin-right:150px;border-style: solid;border-radius:15px">
+        <img src ="/assets/images/pic2.JPG" style="width:330px;height:200px;margin-right:150px;border-style: solid;border-radius:15px">
+        <img src ="/assets/images/pic4.JPG" style="width:270px;height:200px;border-style: solid;border-radius:15px">
+<br>
+    <div id="box1" style="position:absolute; top:420px; left:130px; width:240px; height:140px; border:transparent">
+        <br>
+        <img  name="clipa" id="lkid1a" src="/assets/images/q5.JPG" style="height:80px;width:80px;border:solid;border-radius:150px ;"onclick="testcounts1game2();" hspace=10 >
+        <img name="clipb" id="lkid2a" src="/assets/images/q3.JPG" style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game();">
+        <input type="checkbox"  hidden name="fruit" id="mark1"/>
+        <input type="checkbox"  hidden name="fruit" id="unmark1"/>
+    </div>
+
+    <div id="box5" style="position:absolute; top:420px; left:600px; width:240px; height:140px;border:transparent " >
+        <br>
+        <img  name="clipc" id="tree1a" src="/assets/images/q2.JPG"  style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game3();">
+        <img  name="clipd" id="tree2a" src="/assets/images/q5.JPG" style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game4();" hspace=10>
+        <input type="checkbox"  hidden name="fruit" id="mark2"/>
+        <input type="checkbox"  hidden name="fruit" id="unmark2"/>
+    </div>
+
+
+    <div id="box9" style="position:absolute; top:420px;left:1060px;width:440px;height:140px;border:transparent" >
+        <br>
+        <img name="clipe" id="pen1a" src="/assets/images/q3.JPG"  style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game5();" hspace=10; vspace=9>
+        <img name="clipf" id="pen2a" src="/assets/images/q4.JPG" style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game6();" vspace=9>
+        <input type="checkbox"  hidden name="fruit" id="mark3"/>
+        <input type="checkbox"  hidden name="fruit" id="unmark3"/>
+    </div>
+
+
+    <div id="box11" style="position:absolute; top:250px; left:320px; width:200px; height:180px" >
+        <img name="clip7" style="position:absolute; width:100px;height:100px" src="/assets/images/blank.png" >
+    </div>
+
+    <div id="box3" style="position:absolute; top:250px; left:800px; width:200px; height:180px" >
+        <img name="clip8" style="position:absolute; width:100px;height:100px" src="/assets/images/blank.png" >
+    </div>
+
+    <div id="box4" style="position:absolute; top:250px; left:1250px;width:200px; height:180px" >
+        <img name="clip9"style="position:absolute; width:100px;height:100px" src="/assets/images/blank.png" >
+    </div> 
+
+    <div id="box13" style="position:absolute; top:580px; left:145px; width:150px; height:50px" >
+   <input type="text" name="txt1" value=""  readonly="true"style= "width:190px; height:50px; text-align:center; font-weight:bold; color:blue; font-size:30px;border-style:bold">
+    </div>
+
+    <div id="box14" style="position:absolute; top:580px; left:600px;width:150px; height:50px" >
+        <input type="text" name="txt2" value=""  readonly="true"style= "width:190px; height:50px; text-align:center; font-weight:bold; color:blue; font-size:30px;border-style:bold">
+    </div>
+
+    <div id="box17" style="position:absolute; top:580px; left:1075px;width:150px;height:50px" >
+        <input type="text" name="txt3" value=""  readonly="true" style= "width:190px; height:50px; text-align:center; font-weight:bold; color:blue; font-size:30px;border-style:bold">
+    </div> 
+        
+</form>
+
+</div>
+
+              
+<div id="page2-count_intro" style="display:none;position:absolute;top:60px;left:150px">   
+    <br>  
+ 
+    <a  style ="margin-top:10px;margin-left:-30px;color:green;height:50px;background-color:white" class="previous button1" onclick="showpages_count_intro('page1-count_intro')">&laquo; Previous</a>
+    <br>
+    <br>   
+
+    <h4 style ="margin-left:400px;top:40px;" ><B>රූපයට ගැළපෙන ඉලක්කම තෝරමු.</B></h4>
+    <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -70px; margin-left:200px;">
+    <img src = "/assets/images/shape_sound2.gif" id="question-shapes-g2" style="position: absolute; height: 140px; margin-top: -100px; margin-left:280px;">
+
+    <audio id="quest_audio_g2" src="assets/audio/G2L2_counting_quest.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio> 
+  <br>
+               
+    <form name="f2" >
+    <img src ="/assets/images/pic1.JPG" style="width:350px;height:200px;margin-left:150px;margin-right:100px;border-style: solid;border-radius:15px ;">
+    <img src ="/assets/images/pic3.JPG" style="width:350px;height:200px;margin-right:200px;border-style: solid;border-radius:15px">
+   
+    <div id="box1" style="position:absolute; top:350px; left:230px; width:240px; height:140px; border:transparent">
+        <br>
+        <img  name="clipa" id="lkid1ab" src="/assets/images/q1.JPG" style="height:80px;width:80px;border:solid;border-radius:150px ;"onclick="testcounts1game8();" hspace=10 >
+        <img name="clipb" id="lkid2ab" src="/assets/images/q2.JPG" style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game7();">
+        <input type="checkbox"  hidden name="fruit" id="mark4"/>
+        <input type="checkbox"  hidden name="fruit" id="unmark4"/>
+    </div>
+
+    <div id="box5" style="position:absolute; top:350px; left:700px; width:240px; height:140px;border:transparent " >
+        <br>
+        <img  name="clipc" id="tree1ab" src="/assets/images/q3.JPG"  style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game9();">
+        <img  name="clipd" id="tree2ab" src="/assets/images/q5.JPG" style="height:80px;width:80px;border:solid;border-radius:150px ;" onclick="testcounts1game10();" hspace=10>
+        <input type="checkbox"  hidden name="fruit" id="mark5"/>
+        <input type="checkbox"  hidden name="fruit" id="unmark5"/>
+    </div>
+
+
+    <div id="box11" style="position:absolute; top:0px; left:0px; width:200px; height:180px" >
+        <img name="clip71" style="position:absolute; width:100px;height:100px" src="/assets/images/blank.png" >
+    </div>
+
+    <div id="box3" style="position:absolute; top:400px; left:900px; width:200px; height:180px" >
+        <img name="clip81" style="position:absolute; width:100px;height:100px" src="/assets/images/blank.png" >
+    </div>
+
+    <div id="box13" style="position:absolute; top:480px; left:200px; width:150px; height:50px" >
+        <input type="text" name="txt1" value=""  readonly="true"style= "width:190px; height:50px; text-align:center; font-weight:bold; color:blue; font-size:30px;border-style:bold">
+    </div>
+ 
+     <div id="box14" style="position:absolute; top:480px; left:700px;width:150px; height:50px" >
+         <input type="text" name="txt2" value=""  readonly="true"style= "width:190px; height:50px; text-align:center; font-weight:bold; color:blue; font-size:30px;border-style:bold">
+     </div>
+  
+</form>
+<app-emotiondetector></app-emotiondetector>
+<img id ="arrow" src ="/assets/images/arrow_submit.gif" style="display: none; margin-top: 60px; margin-left: 980px; height: 130px; width: 130px; position: absolute;">
+<button id="submit" class="button2" style="display: none; margin-top: 200px; margin-left: 1000px;" (click)="markstotc1()">ඉවරයි</button> 
+        <div id="myModal" class="modal">
+        
+                      <!-- Modal content -->
+            <div class="modal-content">
+                <div style="margin-left:-60px">
+                <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: -55px; position: absolute">
+                <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 90px; margin-top: -50px; position: absolute;">
+                <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 230px; margin-top: -100px; position: absolute">
+                <img id ="coin4" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 370px;margin-top: -50px; position: absolute" >
+                <img id ="coin5" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 515px; position: absolute">
+                <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 320px; position: absolute">
+                <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+                <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+                <a href="grade1/maths/level1" style="margin-left:430px ;" class="button3" >ආපසු</a>
+                </div>      
+                
+
+            </div>
+
+        </div>
+</div>
+            
+
+                
+                            
+            
+            
+
+
+
+
+
+
+
+
+
+

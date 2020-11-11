@@ -1,0 +1,92 @@
+
+<html>
+    <head>
+
+    </head>
+    <body class="back-image">
+      <div class="row"> 
+        <div class = "column big-left">
+        <div class="tabset">
+
+            <input type="radio" name="tabset" id="tab1" aria-controls="maths" checked>
+            <label for="tab1">ගණිතය</label>
+
+            <input type="radio" name="tabset" id="tab2" aria-controls="sinhala">
+            <label for="tab2">සිංහල</label>
+
+            <input type="radio" name="tabset" id="tab3" aria-controls="env">
+            <label for="tab3">පරිසරය</label>
+            
+            <div class="tab-panels">
+
+              <section id="maths" class="tab-panel">
+
+                 <div class="card" *ngFor="let item of GamesArray | paginate: config">
+                    <div class="row">
+
+                      <div class="column left">
+                          <img src="/assets/images/trophy_icon.jpg" style ="height: 100px; width: 100px; border-radius: 10px; border: 6px solid rgb(250, 223, 187)">
+                      </div>
+
+                      <div class="column right">
+                          <h3 style="color: burlywood;text-shadow: 0 0 1px rgb(250, 223, 187);"><b>{{ item.game_name }}</b></h3>
+                          <h6 style="color: rgb(143, 143, 143);">පියවර {{ item.level }}</h6>
+
+                          <img src = "/assets/images/timer.png" style="height:35px;width:35px; position: absolute;">
+
+                          <h5 style="margin-inline-start:40px;height:35px;margin-top: 10px;">කාලය : <span style="font-family: 'Raleway', sans-serif;">{{ item.time_spent }}</span> </h5>
+                      </div>
+                      <div class="column final">
+                        <div *ngIf="item.marks == 1" style="margin-top: 5px;">
+                          <img src = "/assets/images/coin_achieve.png" style="height:50px;width:60px; position: absolute;">
+                        </div>
+
+                        <div *ngIf="item.marks == 2" style="margin-top: 5px;">
+                          <img src = "/assets/images/coin_achieve.png" style="height:50px;width:60px; position: absolute;">
+                          <img src = "/assets/images/coin_achieve.png" style="margin-left:60px;height:50px;width:60px; position: absolute;">
+                        </div>
+
+                        <div *ngIf="item.marks == 3" style="margin-top: 5px;">
+                          <img src = "/assets/images/coin_achieve.png" style="height:50px;width:60px; position: absolute;">
+                          <img src = "/assets/images/coin_achieve.png" style="margin-left: 60px; height: 50px; width: 60px; position: absolute;">
+                          <img src = "/assets/images/coin_achieve.png" style="margin-inline-start: 120px; height: 50px; width: 60px; position: absolute;">
+                        </div>
+
+                        <div *ngIf="item.marks == 4" style="margin-top: 5px;">
+                          <img src = "/assets/images/coin_achieve.png" style="height:50px;width:60px; position: absolute;">
+                          <img src = "/assets/images/coin_achieve.png" style="margin-left: 60px; height: 50px; width: 60px; position: absolute;">
+                          <img src = "/assets/images/coin_achieve.png" style="margin-inline-start: 120px; height: 50px; width: 60px; position: absolute;">
+                          <img src = "/assets/images/coin_achieve.png" style="margin-inline-start: 180px; height: 50px; width: 60px; position: absolute;;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+
+                  <!-- <div id="listingTable"></div> -->
+                  <!-- <a (click)="prevPage()" id="btn_prev">Prev</a>
+                  <a (click)="nextPage()" id="btn_next">Next</a>
+                  page: <span id="page"></span> -->
+            </section>
+
+              <section id="sinhala" class="tab-panel">
+   
+              </section>
+
+              <section id="env" class="tab-panel">
+
+              </section>
+
+            </div>
+            
+          </div>
+        </div>
+        <div class = "column big-right">
+          <button class="button2" [routerLink]="['/leaderboard']"><span><img src="/assets/images/3150116.png" style="height:40px;width:40px"></span>Leaderboard</button>
+          
+        </div>
+        </div>
+     </body>
+</html>
+
+  

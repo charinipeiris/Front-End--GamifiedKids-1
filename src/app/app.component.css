@@ -1,0 +1,25 @@
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color:#4CAF50;
+    color:white;
+    height:200px;
+  }
+
+  .split {
+    width: 50%;
+    position: fixed;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #111;
+  }
+  
+  .right {
+    right: 0;
+    background-color: red;
+  }
+
+  

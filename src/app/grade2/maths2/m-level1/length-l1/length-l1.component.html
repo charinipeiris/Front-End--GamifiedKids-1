@@ -1,0 +1,129 @@
+
+    <body class="back-image">
+
+        <div id="time-back" style="display: none; z-index: 2; margin-top:120px; position: absolute; margin-left:880px; background-color: azure; border-radius: 10px; width: 250px;">
+            <div id="display" style="margin-left:15px; font-size: 50px; font-family:'Permanent Marker', cursive;">
+              00:00:00
+          </div>
+        
+          <div class="buttons" >
+              <button hidden id="startStop" onclick="startStop()">Start</button> 
+              <button hidden id="reset" onclick="reset()">Reset</button>
+          </div>
+        </div>
+        <div hidden id="clickarray"></div>
+        <!-- page 01 -->
+        <h1 style =  "margin-left:380px; margin-top: 60px; margin-bottom: 20px;"><b>දිග, පළල, උස, බර මනිමු</b></h1>
+                <div class = "center" id="page1-lengths" >
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                <iframe id = "myVideo_money" class="embed-responsive-item" src="https://drive.google.com/file/d/1d-LMsp8iicXTnY5qBaEC0QEAZiJUgIfI/preview" width="640px" height="480px" width="640px" height="480px"
+                                  allowfullscreen>
+                                </iframe>
+                        </div>
+                        <a style="margin-left:700px;width:200px;height:60px" id ="playbtn_money" class="button1" onclick="return showpages_lengths('page2-lengths')">සෙල්ලම් කරන්න</a>
+                </div>
+  
+          <!-- page 02 -->
+         <div class= "center1" style="display:none" id="page2-lengths" >
+
+            <div id = "startdiv" style ="z-index: 3; background-color:rgba(236, 236, 208, 0.95); border-style:solid; border-color:rgb(146, 146, 89); border-radius: 10px; height: 600px; width: 1200px; position: absolute">
+                <button id="startbtn" onclick = "startgame_length()" class="button4"><b>ආරම්භ කරන්න</b></button>
+                <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+               </div>
+
+            <form name="f1">
+                <a id="next-length" class="previous button1" style ='display: none; padding: 12px; width: 170px; margin-top: -10px; margin-left: 1100px;background-color:white ;color: green;' onclick="return  showpages_lengths('page3-lengths');"> Next &#8811; </a>
+            <h3 style ="margin-top: 20px; margin-left:0px;"><b> ගිනිකූරු වලින් දිග මනිමු</b></h3>
+            <h2 id="alert" style="visibility: hidden; color: red;"><b>සියල්ලටම පිලිතුරු සපයන්න</b></h2>
+            
+            <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -95px; margin-left: 400px;">
+            <img src = "/assets/images/shape_sound2.gif" id="question-length-g2l1" style="position: absolute; height: 140px; margin-top: -125px; margin-left: 500px;">
+            <audio id="quest_audio_g2l1" src="assets/audio/G2L1-length-quest.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+            
+                <fieldset style ="margin-left: 30px; margin-top:-20px;">
+                <img src="/assets/images/limage1.JPG" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 200px; width: 550px; margin-left: 100px; margin-right: 50px; padding: 8px;">
+                <img name="clip1" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:50px">
+                <img name="brown" src="/assets/images/q4.JPG" id="a5"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test1_len2()">
+                <img name="red" src="/assets/images/q5.JPG"  id="a10" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test2_len2()">
+                <img name="rw1" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                <input type="checkbox" hidden name="fruit" id="mark1"/>
+                <input type="checkbox" hidden name="fruit" id="unmark1"/>
+            </fieldset>
+  
+            <br>
+                <fieldset style ="margin-left: 30px; margin-top:-5px;">
+                <img src="/assets/images/limage2.JPG" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 200px; width: 550px; margin-left: 100px; margin-right: 50px; padding: 15px;">
+                <img name="clip2" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 12px; margin-right:50px">
+                <img name="rect" src="/assets/images/q5.JPG"  id="b2" class="imagex" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test3_len2()">
+                <img name="sqr" src="/assets/images/q6.JPG"  id="b5" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 85px; width: 85px; padding: 15px;" onclick="test4_len2()">
+                <img name="rw2" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                <input type="checkbox"  hidden name="fruit" id="mark2"/>
+                <input type="checkbox"  hidden name="fruit" id="unmark2"/>
+            </fieldset>
+            <br>
+            <br>
+  
+            </form>
+  
+            </div>
+
+            <div class= "center1" style="display:none" id="page3-lengths" >
+  
+                <form name="f2">
+      
+                <h3 style ="margin-top: 20px; margin-left: 30px;"><b> ගල් වලින් බර මනිමු</b></h3>
+                <h2 id="alert" style="visibility: hidden; color: red;"><b>සියල්ලටම පිලිතුරු සපයන්න</b> </h2>
+                
+                <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -95px; margin-left: 400px;">
+                <img src = "/assets/images/shape_sound2.gif" id="question-length-g2l1-2" style="position: absolute; height: 140px; margin-top: -125px; margin-left: 500px;">
+                <audio id="quest_audio_g2l1_2" src="assets/audio/G2L1-length-quest-2.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+                    
+                    <fieldset style ="margin-left:30px; margin-top:-10px;">
+                    <img src="/assets/images/orange.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 200px; width: 350px; margin-left: 100px; margin-right: 50px; padding: 8px;">
+                  
+                    <img name="clip1" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 15px; margin-right:150px">
+                    <img name="brown" src="/assets/images/q6.JPG" id="a59"  style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test5_len2()">
+                    <img name="red" src="/assets/images/q7.JPG"  id="a109" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test6_len2()">
+                    <img name="rw1" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                    <input type="checkbox" hidden name="fruit" id="mark3"/>
+                    <input type="checkbox" hidden name="fruit" id="unmark3"/>
+                </fieldset>
+      
+                <br>
+                    <fieldset style ="margin-left: 30px; margin-top:-5px;">
+                    <img src="/assets/images/biscuits.png" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 200px; width: 350px; margin-left: 100px; margin-right: 50px; padding: 15px;">
+                  
+                    <img name="clip2" src="/assets/images/question_mark.png" style="height:85px; width:85px;border:solid; border-radius: 12px; margin-right:150px">
+                    <img name="rect" src="/assets/images/q5.JPG"  id="b29" class="imagex" style="margin-right: 30px;border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 85px; width: 85px; padding: 12px;" onclick="test7_len2()">
+                    <img name="sqr" src="/assets/images/q4.JPG"  id="b59" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 12px; height: 85px; width: 85px; padding: 15px;" onclick="test8_len2()">
+                    <img name="rw2" src="/assets/images/trans.svg" style="height:100px; width:100px; ">
+                    <input type="checkbox"  hidden name="fruit" id="mark4"/>
+                    <input type="checkbox"  hidden name="fruit" id="unmark4"/>
+                     </fieldset>
+                <br>
+                <br>
+      
+                </form>
+
+                <app-emotiondetector></app-emotiondetector>  
+                <img id ="arrow1" src ="/assets/images/arrow_submit.gif" style="display: none; margin-top: -175px; margin-left: 1060px; height: 130px; width: 130px; position: absolute;">
+           <button id="final_button" class="button2" style="display: none;margin-top:-20px" (click)="markstot_lengthsm()">ඉවරයි</button> 
+  
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div style="margin-left:-60px">
+                    <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 5px; position: absolute">
+                    <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 150px; margin-top: -50px; position: absolute;">
+                    <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 290px; margin-top: -50px; position: absolute">
+                    <img id ="coin4" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 430px; position: absolute">
+                    <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+                    <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+                    <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+                    <a href="grade2/maths/level1" style="margin-left:440px;" class="button3">ආපසු</a>
+                </div>
+                    
+            </div>
+              </div>
+                </div>
+  </body>
+

@@ -1,0 +1,323 @@
+  
+<body style="background-size:cover;
+background-image:url(/assets/images/bg-count.jpg);
+background-position:50% 50%;
+margin-top:-50px;
+left: 50px;
+height:40em;  
+width:100%;">
+
+
+<!--page 01 -->
+<div id="page1-addition2" style="display:block;position:absolute;top:40px;left:150px;">
+    
+    <a href="/grade1/maths/level2" style ='position:absolute; margin-top:70px;margin-left:-50px;color:green;height:50px ;' class="previous button1">&laquo; Previous</a>
+    <a style ='position:absolute; margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1" onclick="showpages_addition2('page2-addition2')"> Next &raquo;</a>
+    
+    <h1 style =  "margin-left:220px; margin-top:-80px; margin-bottom: 10px;"><b>ගොඩවල් දෙකක් එකතු කරමු</b></h1>  
+    <form name="f3">
+
+      <div>
+        <img src = "/assets/images/shape_sound2.gif" id="addition-intro" style="height:140px; margin-top:50px; margin-left:80px;">
+        <audio id="intro_audio" src="/assets/audio/gr1-maths-addition-L2.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+        <h1 style =  "margin-left:220px; margin-top:-80px; margin-bottom: 10px;"><b>ගොඩවල් දෙකක් එකතු කරමු</b></h1>  
+      </div>
+
+      <div id="1">
+          <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:30px;margin-right:60px; margin-top:20px;">
+          <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:565px; margin-top:20px;">
+          <input type="button" name="but1" value="=" onClick="game1();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px;">
+          <input type="text" name="txt1" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px;">
+      </div>     
+         
+      <div style="margin-top:10px" id="2">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:30px;margin-right:60px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:5px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:400px">
+        <input type="button" name="but1" value="=" onClick="game2();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt2" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="3">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:30px;margin-right:60px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:5px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:5px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:235px">
+        <input type="button" name="but1" value="=" onClick="game3();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt3" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="4">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:30px;margin-right:60px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:5px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:5px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:5px">
+        <img src="/assets/images/ball.png" style="width:100px;height:100px;margin-left:60px;margin-right:75px">
+        <input type="button" name="but1" value="=" onClick="game4();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt4" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+
+      <img src="assets/images/vertical-line.png" style="height: 450px; width:600px; margin-left: 100px; margin-top: -460px;">
+          
+    </form>
+     
+    
+</div>
+
+
+<!--page 02-->
+<div id="page2-addition2" style="display:none;position:absolute;top:40px;left:150px;">   
+    <a  style ='margin-top:70px;margin-left:-50px;color:green;height:50px;' class="previous button1" onclick="showpages_addition2('page1-addition2')">&laquo; Previous</a>
+    <a style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1" onclick="showpages_addition2('page3-addition2')"> Next &raquo;</a>
+
+    <h1 style = "margin-left:220px; margin-top:-80px; margin-bottom: 10px;"><b>ගොඩවල් දෙකක් එකතු කරමු</b></h1>  
+    <form name="f4" style="margin-left:-40px;">
+
+      <div>
+        <!-- <img src = "/assets/images/shape_sound2.gif" id="addition-intro" style="position:absolute; height:140px; margin-top: -95px; margin-left:140px"> -->
+        <!-- <audio id="intro_audio" src="/assets/audio/gr1-maths-addition-L2.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio> -->
+      </div>
+<br>
+<br>
+      <div id="5">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:465px">
+        <input type="button" name="but1" value="=" onClick="game5();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt5" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+         
+      <div style="margin-top:10px" id="6">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:340px">
+        <input type="button" name="but1" value="=" onClick="game6();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt6" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="7">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:215px">
+        <input type="button" name="but1" value="=" onClick="game7();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt7" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="8">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball2.png" style="width:100px;height:100px;margin-left:20px;margin-right:90px">
+        <input type="button" name="but1" value="=" onClick="game8();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt8" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+      
+      <img src="assets/images/vertical-line.png" style="height: 450px; width:600px; margin-left: 170px; margin-top: -460px;">
+                    
+    </form>
+</div>
+
+<!--page 03-->
+<div id="page3-addition2" style="display:none;position:absolute;top:40px;left:150px;">   
+   
+    <a  style ='margin-top:70px;margin-left:-60px;color:green;height:50px;' class="previous button1" onclick="showpages_addition2('page2-addition2')">&laquo; Previous</a>
+    <a style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1" onclick="showpages_addition2('page4-addition2')"> Next &raquo;</a>
+    
+    <h1 style =  "margin-left:220px; margin-top:-80px; margin-bottom: 10px;color:black"><b>ගොඩවල් දෙකක් එකතු කරමු</b></h1>  
+    <form name="f5" style="margin-left:40px;">
+
+      <div>
+        <!-- <img src = "/assets/images/shape_sound2.gif" id="addition-intro" style="position:absolute; height:140px; margin-top:-90px; margin-left:60px"> -->
+        <!-- <audio id="intro_audio" src="/assets/audio/gr1-maths-addition-L2.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio> -->
+      </div>
+<br>
+<br>
+      <div id="5">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:445px">
+        <input type="button" name="but1" value="=" onClick="game9();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt9" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+          
+      <div style="margin-top:10px" id="6">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:320px">
+        <input type="button" name="but1" value="=" onClick="game10();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt10" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+      
+      <div style="margin-top:5px" id="7">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:215px">
+        <input type="button" name="but1" value="=" onClick="game11();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt11" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+      
+      <div style="margin-top:5px" id="8">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball3.png" style="width:80px;height:80px;margin-left:20px;margin-right:110px">
+        <input type="button" name="but1" value="=" onClick="game12();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt12" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+            
+      <img src="assets/images/vertical-line.png" style="height: 450px; width:600px; margin-left: 250px; margin-top: -400px;">
+            
+    </form>
+</div> 
+
+<!--page 04-->
+<div id="page4-addition2" style="display:none;position:absolute;top:40px;left:150px;">   
+   
+    <a  style ='margin-top:70px;margin-left:-60px;color:green;height:50px;' class="previous button1" onclick="showpages_addition2('page3-addition2')">&laquo; Previous</a>
+    <a style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1" onclick="showpages_addition2('page5-addition2')"> Next &raquo;</a>
+    
+    <h1 style =  "margin-left:220px; margin-top:-80px; margin-bottom: 20px;"><b>ගොඩවල් දෙකක් එකතු කරමු</b></h1>  
+    <form name="f6" style="margin-left:-120px;">
+
+      <div>
+        <!-- <img src = "/assets/images/shape_sound2.gif" id="addition-intro" style="position:absolute; height:140px; margin-top: -95px; margin-left:180px"> -->
+        <!-- <audio id="intro_audio" src="/assets/audio/gr1-maths-addition-L2.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio> -->
+      </div>
+ <br>
+ <br>
+      <div id="5">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:365px">
+        <input type="button" name="but1" value="=" onClick="game13();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt13" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+         
+      <div style="margin-top:10px" id="6">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:245px">
+        <input type="button" name="but1" value="=" onClick="game14();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt14" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="7">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:125px">
+        <input type="button" name="but1" value="=" onClick="game15();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt15" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="8">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball4.png" style="width:100px;height:100px;margin-left:20px;margin-right:5px">
+        <input type="button" name="but1" value="=" onClick="game16();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt16" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+          
+      <img src="assets/images/vertical-line.png" style="height: 450px; width:600px; margin-left:400px; margin-top: -460px;">
+          
+    </form>
+</div>   
+
+<!--page 05-->
+<div id="page5-addition2" style="display:none;position:absolute;top:40px;left:150px;">   
+   
+    <a  style ='margin-top:70px;margin-left:-60px;color:green;height:50px;' class="previous button1" onclick="showpages_addition2('page4-addition2')">&laquo; Previous</a>
+    <a href="/grade1/maths/level2/counting"style ='margin-top:70px;margin-left:900px;color:green;height:50px ;' class="previous button1" > Next &raquo;</a>
+    
+    <h1 style =  "margin-left:220px; margin-top:-80px; margin-bottom: 20px;"><b>ගොඩවල් දෙකක් එකතු කරමු</b></h1>  
+    <form name="f7" style="margin-left:-120px;">
+<br>
+<br>
+      <div>
+        <!-- <img src = "/assets/images/shape_sound2.gif" id="addition-intro" style="position:absolute; height:140px; margin-top: -95px; margin-left:180px"> -->
+        <!-- <audio id="intro_audio" src="/assets/audio/gr1-maths-addition-L2.m4a" type="audio/m4a" control>Your browser does not support the audio element. </audio> -->
+      </div>
+
+      <div id="5">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:330px">
+        <input type="button" name="but1" value="=" onClick="game17();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt17" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+         
+      <div style="margin-top:10px" id="6">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:235px">
+        <input type="button" name="but1" value="=" onClick="game18();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt18" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="7">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:140px">
+        <input type="button" name="but1" value="=" onClick="game19();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt19" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+    
+      <div style="margin-top:5px" id="8">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:60px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:5px">
+        <img src="/assets/images/ball5.png" style="width:70px;height:100px;margin-left:20px;margin-right:45px">
+        <input type="button" name="but1" value="=" onClick="game20();"style="width:100px;margin-right:45px; height:60px; color:black; font-size:30px;border-radius:20px ">
+        <input type="text" name="txt20" value="" readonly= "true"style=" width:80px; height:80px; text-align:center; color:red; font-size:48px;border-radius:15px">
+      </div>
+
+           
+      <img src="assets/images/vertical-line.png" style="height: 450px; width:600px; margin-left: 410px; margin-top: -460px;">
+          
+    </form>
+</div>   
+

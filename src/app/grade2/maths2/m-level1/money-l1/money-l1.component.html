@@ -1,0 +1,165 @@
+<html>
+<body style="background-size:cover;
+background-image:url(/assets/images/by.jpg);
+background-position:50% 50%;
+margin-top:-50px;
+left: 50px;
+height:40em;  
+width:100%;">
+
+<div id="time-back" style="display: none; z-index: 2; margin-top:140px; position: absolute; margin-left: 1050px; background-color: azure; border-radius: 10px; width: 250px;">
+    <div id="display" style="margin-left:25px; font-size: 50px; font-family: 'Permanent Marker', cursive;">
+      00:00:00
+  </div>
+
+  <div class="buttons" >
+      <button hidden id="startStop" onclick="startStop()">Start</button> 
+      <button hidden id="reset" onclick="reset()">Reset</button>
+  </div>
+</div>
+<div hidden id="clickarray"></div>
+
+<!--page 01 -->
+<br>
+<br>
+<h1 style ="margin-left:440px; margin-top: 30px; margin-bottom: 20px;"></h1> 
+<div class="center" id="page1-mon1">
+   
+    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+        <iframe id = "myVideo_money" class="embed-responsive-item" src="https://drive.google.com/file/d/1vXBuMdd2o5xa6uV1u6wkSDbiIulzxO2l/preview" width="640" height="450" width="640" height="450"
+          allowfullscreen>
+    </iframe>
+    </div>
+<a style="margin-left:700px;width:200px;height:70px;margin-top: -20px;padding:20px" id ="playbtn_money" class="button1" onclick="return showpages_mon1('page2-mon1');">සෙල්ලම් කරන්න</a>
+
+</div>
+
+
+<!--page 02 -->
+<div id="page2-mon1" style="display:none;position:absolute;top:40px;left:150px;">
+
+     <div id = "startdiv" style ="margin-top: 20px; z-index: 3; background-color: rgba(236, 236, 208, 0.95); border-style: solid; border-color: rgb(146, 146, 89); border-radius: 10px; height: 580px; width: 1250px; position: absolute; margin-left: -20px;">
+      <button id="startbtn" onclick = "startgame_money()" class="button4"><b>ආරම්භ කරන්න</b></button>
+      <img src = "/assets/images/start_button.png" style=" opacity: 0.85;margin-top: -300px; margin-left: 150px">
+     </div>
+
+    <!-- <a style ='margin-top:70px;margin-left:-60px;color:green;height:50px ;' class="previous button1" onclick="showpages_mon1('page1-mon1')">&laquo; Previous</a> -->
+    <h4 style="margin-top:40px;margin-left:200px"> චොකල්ට් එක මිලදී ගැනීමට උවමනා කාසි 2 තෝරමු</h4>
+    <a id = "next1" style ='display: none;top:-25px; margin-left: 1000px; color: green;height:50px;background-color:white;' class="previous button1" onclick="showpages_mon1('page3-mon1')"> Next &raquo;</a>
+   
+ 
+    
+    <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -50px; margin-left: 10px;">
+    <img src = "/assets/images/shape_sound2.gif" id="question-money-choco" style="position: absolute; height: 140px; margin-top: -80px; margin-left: 80px;">
+
+    <audio id="quest_audio_money_choco" src="assets/audio/G2L1-money-choco.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+    
+    <form name="f1">
+ 
+        <img src="/assets/images/bob1.JPG" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 300px; width: 300px;margin-top:30px;margin-left:-20px; padding: 8px;">
+        
+        <img name="clip1" style="height:105px; width:185px;border:solid;top:-500px;margin-left:30px;border-radius: 15px;">
+        <img src="/assets/images/click.gif" style="margin-right:100px;width:150px;height:90px">
+        
+        <img name="a" src="/assets/images/a_1.JPG" id="a"  style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;margin-left:-50px;margin-right:10px" onclick="test1_mono()">
+        <img name="b" src="/assets/images/a_2.JPG"  id="b" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;" onclick="test2_mono()">
+        <img name="c" src="/assets/images/a_3.JPG"  id="c" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;margin-left:800px;margin-top:-200px" onclick="test3_mono()">
+       
+        <img name="rw1" src="/assets/images/trans.svg" style="height:100px; width:100px;">
+        <input type="checkbox" hidden name="fruit" id="mark1"/>
+        <input type="checkbox" hidden name="fruit" id="unmark1"/>
+
+    </form>
+</div>
+
+<!--page 03 -->
+
+<div id="page3-mon1" style="display:none;position:absolute;top:70px;left:150px;">
+    <h4 style="top:900px;margin-left:200px">කේක් එක මිලදී ගැනීමට උවමනා කාසි 2 තෝරමු</h4>
+    <!-- <a style ='margin-top:70px;margin-left:-60px;color:green;height:50px ;' class="previous button1" onclick="showpages_mon1('page2-mon1')">&laquo; Previous</a> -->
+    <a id = "next2" style ='display: none;top:-25px; margin-left: 1000px; color: green;height:50px;background-color:white;' class="previous button1" onclick="showpages_mon1('page4-mon1')"> Next &raquo;</a>
+    
+    <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -50px; margin-left: 10px;;position:absolute">
+    <img src = "/assets/images/shape_sound2.gif" id="question-money-cake" style="position: absolute; height: 140px; margin-top: -80px; margin-left: 100px;position:absolute">
+
+    <audio id="quest_audio_money_cake" src="assets/audio/G2L1-money-cake.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+    <br>
+    <br>
+    <form name="f2">
+ 
+        <img src="/assets/images/bob2.JPG" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 300px; width: 300px;margin-top:30px;margin-left:-20px; padding: 8px;">
+        
+        <img name="clip1" style="height:105px; width:185px;border:solid;top:-500px;margin-left:30px;border-radius: 15px;">
+        <img src="/assets/images/click.gif" style="margin-right:100px;width:150px;height:90px">
+        
+        <img name="a" src="/assets/images/a_1.JPG" id="aa"  style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;margin-left:-50px;margin-right:10px" onclick="test4_mono()">
+        <img name="b" src="/assets/images/a_2.JPG"  id="bb" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;" onclick="test5_mono()">
+        <img name="c" src="/assets/images/a_4.JPG"  id="cc" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;margin-left:800px;margin-top:-200px" onclick="test6_mono()">
+       
+        <img name="rw1" src="/assets/images/trans.svg" style="height:100px; width:100px;">
+        <input type="checkbox" hidden name="fruit" id="mark2"/>
+        <input type="checkbox" hidden name="fruit" id="unmark2"/>
+
+    </form>
+ 
+
+   
+
+</div>
+
+<!--page 04 -->
+
+<div id="page4-mon1" style="display:none;position:absolute;top:40px;left:150px;">  
+    <!-- <a style ='margin-top:70px;margin-left:-60px;color:green;height:50px ;' class="previous button1" onclick="showpages_mon1('page3-mon1')">&laquo; Previous</a> -->
+    <br>
+    <br>
+    <h4 style="text-align: center;">පහතින් දැක්වෙන රසකැවිල්ල මිලදී ගැනීමට උවමනා කාසි 2 තෝරමු.</h4>
+    <img src = "/assets/images/click.gif" style="position: absolute; height: 70px; margin-top: -50px; margin-left: 10px;">
+    <img src = "/assets/images/shape_sound2.gif" id="question-money-sweet" style="position: absolute; height: 140px; margin-top: -80px; margin-left: 80px;">
+
+    <audio id="quest_audio_money_sweet" src="assets/audio/G2L1-money-sweet.mp3" type="audio/m4a" control>Your browser does not support the audio element. </audio>
+    
+    <form name="f4">
+ 
+        <img src="/assets/images/bob3.JPG" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 300px; width: 300px;margin-top:30px;margin-left:-20px; padding: 8px;">
+        
+        <img name="clip1" style="height:105px; width:185px;border:solid;top:-500px;margin-left:30px;border-radius: 15px;">
+        <img src="/assets/images/click.gif" style="margin-right:100px;width:150px;height:90px">
+        
+        <img name="a" src="/assets/images/a_1.JPG" id="aaa"  style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;margin-left:-50px;margin-right:10px" onclick="test7_mono()">
+        <img name="b" src="/assets/images/a_2.JPG"  id="bbb" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;" onclick="test8_mono()">
+        <img name="c" src="/assets/images/a_3.JPG"  id="ccc" style="border-style:solid; border-color:rgb(0, 0, 0); background:#ffffff; border-radius: 15px; height: 105px; width: 185px; padding: 12px;margin-left:800px;margin-top:-200px" onclick="test9_mono()">
+       
+        <img name="rw1" src="/assets/images/trans.svg" style="height:100px; width:100px;">
+        <input type="checkbox" hidden name="fruit" id="mark3"/>
+        <input type="checkbox" hidden name="fruit" id="unmark3"/>
+
+    </form>
+
+    <app-emotiondetector></app-emotiondetector>
+
+    <img id ="arrow1" src ="/assets/images/arrow_submit.gif" style="display:none;margin-top: -100px; margin-left: 830px; height: 130px; width: 130px; position: absolute;">
+    <button id="submit" class="button2" style="display:none;" (click)="markstot_mono1()">ඉවරයි</button> 
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div style="margin-left:-60px ;">
+            <img id="coin1" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 55px; position: absolute">
+        <img id ="coin2" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 220px; margin-top: -50px; position: absolute;">
+        <img id ="coin3" src="/assets/images/win_coin.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 550px; margin-left: 390px; position: absolute">
+        <img id ="sad_coin" src="/assets/images/sad.gif" class= "coin_img" style = "visibility:hidden; height: 220px; width: 220px; margin-left: 380px; position: absolute">
+        <h1 style="font-family:Chalkduster, fantasy; margin-left: 380px; position: absolute; color:darkcyan">Completed!!!</h1>
+        <h5 style ="position: absolute; margin-top: 300px; margin-left: 350px; font-size: 30px">ගත වූ කාලය : <span id="perf-time"></span></h5>
+        <a href="grade2/maths/level1"  style="margin-left:440px;" class="button3">ආපසු</a>
+        </div>
+        
+      </div>
+    </div>
+
+</div>
+
+
+
+

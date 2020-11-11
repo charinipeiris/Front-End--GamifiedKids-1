@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+
+    </head>
+    <body class="back-image">
+        <img src="/assets/images/1837.png" style="margin-left:390px; height:120px;">
+        <h2 style="font-family: Holtwood One SC, serif; margin-top: -55px; margin-left: 560px;">Leaderboard</h2>
+        <div class="lead-back">
+        <div *ngFor="let item of RanksArray | paginate: config" class="card">
+            <div class="row">
+                <div class="column left">
+                    <div *ngIf="item.rank=='1'">
+                        <h3 style="z-index:999;position: absolute;font-family: Holtwood One SC;  margin-left: 40px; color:rgb(221, 94, 20)">{{item.rank}}</h3>
+                        <img src="assets/images/gold.png" style="z-index:2;position: absolute; height: 60px; margin-left: 20px; margin-top: -8px;">
+                    </div>
+                    <div *ngIf="item.rank=='2'">
+                        <h3 style="z-index:999;position: absolute;font-family: Holtwood One SC;  margin-left: 37px;color:rgb(100, 105, 112)">{{item.rank}}</h3>
+                        <img src="assets/images/silver.png" style="z-index:2;position: absolute; height: 60px; margin-left: 20px; margin-top: -8px;">
+                    </div>
+                    <div *ngIf="item.rank=='3'">
+                        <h3 style="z-index:999;position: absolute;font-family: Holtwood One SC;  margin-left: 35px;color:rgb(230, 197, 89)">{{item.rank}}</h3>
+                        <img src="assets/images/bronze.png" style="z-index:2;position: absolute; height: 60px; margin-left: 20px; margin-top: -8px;">
+                    </div>
+
+                    <div *ngIf="item.rank > '3' "><h3 style="position:absolute; margin-left: 30px;margin-top:5px;font-family: Holtwood One SC;color:rgb(165, 92, 9)">{{item.rank}}</h3></div>
+
+                    <img src="/assets/images/avatar.png" style="position: absolute;height: 55px;margin-left:90px; margin-top: -6px">
+                </div>
+                <div class="column mid">
+                    <h3 style="font-family: Holtwood One SC; color:rgb(88, 56, 13)"><b>{{ item.username }}</b></h3>
+                    <!-- <h5 style="display: inline-block;margin-inline-start:40px;height:35px;margin-top: 10px;">සම්පූර්ණ කල ක්‍රියාකාරකම් ගණන : <span style="font-family: 'Raleway', sans-serif;">{{ item.completed_games }}</span> </h5> -->
+                </div>
+                <div class="column right">
+                    <img src = "/assets/images/coin_achieve.png" style="margin-left: 38px;margin-top:-10px;height: 50px; width: 60px; position: absolute;">
+                    <h3 style="font-family: Holtwood One SC;"> {{ item.totalMarks }}</h3>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 220px;margin-top:25px;">
+            <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+        </div>
+
+    </div>
+
+     </body>
+</html>
+
+  
